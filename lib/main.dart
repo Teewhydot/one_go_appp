@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:one_go_app/views/sign_in_page.dart';
+import 'package:one_go_app/views/sign_up_page.dart';
 import 'package:one_go_app/views/welcome_page.dart';
 
 void main() {
@@ -16,10 +18,14 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       designSize: const Size(414, 896),
-      builder: (_) =>
-      const MaterialApp(
+      builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: WelcomePage(),
+        initialRoute: WelcomePage.id,
+        routes: {
+          WelcomePage.id: (context) => const WelcomePage(),
+          SignInPage.id: (context) => const SignInPage(),
+          SignUpPage.id: (context) => const SignUpPage(),
+        },
       ),
     );
   }
