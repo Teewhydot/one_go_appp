@@ -17,8 +17,8 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  bool isPasswordVisible = true;
-  bool isConfirmPasswordVisible = true;
+  bool isPasswordVisible = false;
+  bool isConfirmPasswordVisible = false;
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
@@ -26,34 +26,69 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: whiteColor,
-      body: Center(
-        child: Column(
-          children: [
-            Expanded(
-              child: Column(
-                children: [
-                  addVerticalSpacing(100),
-                  TextFieldForm(controller: _firstNameController, hintText: 'First Name',),
-                  addVerticalSpacing(50),
-                  TextFieldForm(controller: _lastNameController, hintText: 'Last Name',),
-                  addVerticalSpacing(50),
-                  TextFieldForm(controller: _emailController, hintText: 'Email',),
-                  addVerticalSpacing(50),
-                  TextFieldForm(controller: _phoneNumberController, hintText: 'Phone Number',),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: ReusableButton(
-                        const Text(
-                          'Sign Up',
-                          style: boldWhiteStyle,
-                        ),
-                        () {},
-                        blueColor),
-                  ),
-                ],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+        child: Form(
+          key: _formKey,
+          child: ListView(
+            children: [
+              addVerticalSpacing(165),
+              const Text(
+                "Sign up",
+                style: boldBlackStyle,
               ),
-            ),
-          ],
+              addVerticalSpacing(60),
+              TextFieldForm(
+                controller: _firstNameController,
+                hintText: 'First Name',
+                keyboardType: TextInputType.name,
+                obscurePassword: null,
+              ),
+              addVerticalSpacing(25),
+              TextFieldForm(
+                controller: _lastNameController,
+                hintText: 'Last Name',
+                keyboardType: TextInputType.name,
+                obscurePassword: null,
+              ),
+              addVerticalSpacing(25),
+              TextFieldForm(
+                controller: _emailController,
+                hintText: 'Email',
+                keyboardType: TextInputType.emailAddress,
+                obscurePassword: null,
+              ),
+              addVerticalSpacing(25),
+              TextFieldForm(
+                controller: _phoneNumberController,
+                hintText: 'Phone Number',
+                keyboardType: TextInputType.phone,
+                obscurePassword: null,
+              ),
+              addVerticalSpacing(25),
+              TextFieldForm(
+                controller: _passwordController,
+                hintText: 'Password',
+                keyboardType: TextInputType.visiblePassword,
+                obscurePassword: isPasswordVisible,
+              ),
+              addVerticalSpacing(25),
+              TextFieldForm(
+                controller: _confirmPasswordController,
+                hintText: 'Confirm Password',
+                keyboardType: TextInputType.visiblePassword,
+                obscurePassword: isConfirmPasswordVisible,
+              ),
+              addVerticalSpacing(50),
+              ReusableButton(
+                  const Text(
+                    'Complete',
+                    style: boldWhiteStyle,
+                  ),
+                  () {},
+                  blueColor),
+            ],
+          ),
         ),
       ),
     );
@@ -61,41 +96,41 @@ class _SignUpPageState extends State<SignUpPage> {
 }
 
 class TextFieldForm extends StatelessWidget {
-  const TextFieldForm({
-    super.key,
-    required TextEditingController controller,required this.hintText,
-  }) : _controller = controller;
+  const TextFieldForm(
+      {super.key,
+      required TextEditingController controller,
+      required this.hintText,
+      required this.obscurePassword,
+      required this.keyboardType})
+      : _controller = controller;
 
   final TextEditingController _controller;
   final String hintText;
-
+  final TextInputType keyboardType;
+  final bool? obscurePassword;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-      child: TextField(
-        controller: _controller,
-        cursorColor: Colors.black,
-        minLines: 1,
-        maxLines: null,
-        keyboardType: TextInputType.name,
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: textFieldFillColor,
-          focusColor: Colors.white,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25.r),
-          ),
-          border: OutlineInputBorder(
-            borderSide:
-            const BorderSide(width: 0, style: BorderStyle.none),
-            borderRadius: BorderRadius.circular(25.r),
-          ),
-          hintText: "First Name",
-          contentPadding: EdgeInsets.symmetric(
-              vertical: 10.0.h, horizontal: 20.0.w),
+    return TextField(
+      controller: _controller,
+      cursorColor: Colors.black,
+      minLines: 1,
+      maxLines: null,
+      keyboardType: keyboardType,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: textFieldFillColor,
+        focusColor: Colors.white,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(25.r),
         ),
+        border: OutlineInputBorder(
+          borderSide: const BorderSide(width: 0, style: BorderStyle.none),
+          borderRadius: BorderRadius.circular(25.r),
+        ),
+        hintText: hintText,
+        contentPadding:
+            EdgeInsets.symmetric(vertical: 10.0.h, horizontal: 20.0.w),
       ),
     );
   }

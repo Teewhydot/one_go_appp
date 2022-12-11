@@ -94,6 +94,7 @@ const accessDenied = SnackBar(
 const linkStyle = TextStyle(color: Colors.blue);
 const defaultStyle = TextStyle(color: Colors.grey, fontSize: 15.0);
 const boldWhiteStyle = TextStyle(color: Colors.white,fontSize: 25.0, fontWeight: FontWeight.bold);
+const boldBlackStyle = TextStyle(color: Colors.black,fontSize: 25.0, fontWeight: FontWeight.bold);
 const boldBlueStyle = TextStyle(color: Colors.blue,fontSize: 25.0, fontWeight: FontWeight.bold);
 const normalBlueStyle = TextStyle(color: Colors.blue,fontSize: 25.0, fontWeight: FontWeight.normal);
 const blueColor = Color(0xFF4960F9);

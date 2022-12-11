@@ -18,7 +18,7 @@ class ReusableButton extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            height: 64.h,
+            height: 51.h,
             child: ElevatedButton(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(buttonColor),
