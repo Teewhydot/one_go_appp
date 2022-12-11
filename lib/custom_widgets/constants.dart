@@ -101,3 +101,4 @@ const greyColor = Color(0xFFA9A9A9);
 const blueTextColor = Color(0xFF2743fb);
 const textColor = Color(0xFF3a3a3a);
 const whiteColor = Color(0xFFFFFFFF);
+const textFieldFillColor = Color(0xFFdadada);

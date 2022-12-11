@@ -29,7 +29,6 @@ class WelcomePage extends StatelessWidget {
                           'Sign in',
                           style: boldWhiteStyle,
                         ), () {
-                          print("tapped");
                       Navigator.push(
                           context,
                           PageTransition(
@@ -44,7 +43,6 @@ class WelcomePage extends StatelessWidget {
                           'Sign up',
                           style: normalBlueStyle,
                         ), () {
-                      print("tapphhed");
                       Navigator.pushNamed(context, SignUpPage.id);
                     }, whiteColor),
                   ),
