@@ -4,7 +4,6 @@ import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
 import 'package:one_go_app/views/sign_up_page.dart';
-import 'package:page_transition/page_transition.dart';
 
 class WelcomePage extends StatelessWidget {
   static const String id = 'WelcomePage';
@@ -29,11 +28,7 @@ class WelcomePage extends StatelessWidget {
                           'Sign in',
                           style: boldWhiteStyle,
                         ), () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              child: const SignInPage(),
-                              type: PageTransitionType.rightToLeft));
+                      Navigator.pushNamed(context, SignInPage.id);
                     }, blueColor),
                   ),
                   Padding(
@@ -47,6 +42,7 @@ class WelcomePage extends StatelessWidget {
                     }, whiteColor),
                   ),
                   addVerticalSpacing(50),
+
                 ],
               ),
             )),
