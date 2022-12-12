@@ -18,7 +18,7 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
-  bool isPasswordVisible = true;
+  bool isPasswordVisible = false;
   String email = '';
   String password = '';
 

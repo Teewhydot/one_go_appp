@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
+import 'package:one_go_app/custom_widgets/text_field_form.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = 'SignUpPage';
@@ -43,6 +43,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'First Name',
                 keyboardType: TextInputType.name,
                 obscurePassword: null,
+                suffixIcon: null,
               ),
               addVerticalSpacing(25),
               TextFieldForm(
@@ -50,6 +51,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Last Name',
                 keyboardType: TextInputType.name,
                 obscurePassword: null,
+                suffixIcon: null,
               ),
               addVerticalSpacing(25),
               TextFieldForm(
@@ -57,6 +59,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Email',
                 keyboardType: TextInputType.emailAddress,
                 obscurePassword: null,
+                suffixIcon: null,
               ),
               addVerticalSpacing(25),
               TextFieldForm(
@@ -64,6 +67,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Phone Number',
                 keyboardType: TextInputType.phone,
                 obscurePassword: null,
+                suffixIcon: null,
               ),
               addVerticalSpacing(25),
               TextFieldForm(
@@ -71,6 +75,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Password',
                 keyboardType: TextInputType.visiblePassword,
                 obscurePassword: isPasswordVisible,
+                suffixIcon: const Icon(Icons.visibility),
               ),
               addVerticalSpacing(25),
               TextFieldForm(
@@ -78,6 +83,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Confirm Password',
                 keyboardType: TextInputType.visiblePassword,
                 obscurePassword: isConfirmPasswordVisible,
+                suffixIcon: const Icon(Icons.visibility),
               ),
               addVerticalSpacing(50),
               ReusableButton(
@@ -90,47 +96,6 @@ class _SignUpPageState extends State<SignUpPage> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class TextFieldForm extends StatelessWidget {
-  const TextFieldForm(
-      {super.key,
-      required TextEditingController controller,
-      required this.hintText,
-      required this.obscurePassword,
-      required this.keyboardType})
-      : _controller = controller;
-
-  final TextEditingController _controller;
-  final String hintText;
-  final TextInputType keyboardType;
-  final bool? obscurePassword;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: _controller,
-      cursorColor: Colors.black,
-      minLines: 1,
-      maxLines: null,
-      keyboardType: keyboardType,
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: textFieldFillColor,
-        focusColor: Colors.white,
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(25.r),
-        ),
-        border: OutlineInputBorder(
-          borderSide: const BorderSide(width: 0, style: BorderStyle.none),
-          borderRadius: BorderRadius.circular(25.r),
-        ),
-        hintText: hintText,
-        contentPadding:
-            EdgeInsets.symmetric(vertical: 10.0.h, horizontal: 20.0.w),
       ),
     );
   }
