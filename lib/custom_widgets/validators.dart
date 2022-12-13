@@ -10,6 +10,7 @@ final emailValidator = MultiValidator([
   RequiredValidator(errorText: 'Email is required'),
   EmailValidator(errorText: 'Please enter a valid email')
 ]);
+final otpValidator = MultiValidator([RequiredValidator(errorText: "Enter OTP"),]);
 
 final passwordValidator = MultiValidator([
   RequiredValidator(errorText: 'Password is required'),
