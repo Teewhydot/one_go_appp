@@ -10,6 +10,7 @@ class TextFieldForm extends StatelessWidget {
         required this.hintText,
         required this.obscurePassword,
         required this.suffixIcon,
+        required this.maxLines,
         required this.keyboardType})
       : _controller = controller;
 
@@ -17,15 +18,15 @@ class TextFieldForm extends StatelessWidget {
   final String hintText;
   final TextInputType keyboardType;
   final Widget? suffixIcon;
-  final bool? obscurePassword;
+  final bool obscurePassword;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: _controller,
       cursorColor: Colors.black,
-      minLines: 1,
-      maxLines: null,
+      obscureText: obscurePassword,
       keyboardType: keyboardType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,

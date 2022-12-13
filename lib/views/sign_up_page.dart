@@ -17,8 +17,8 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  bool isPasswordVisible = false;
-  bool isConfirmPasswordVisible = false;
+  bool isPasswordVisible = true;
+  bool isConfirmPasswordVisible = true;
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
@@ -42,7 +42,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 controller: _firstNameController,
                 hintText: 'First Name',
                 keyboardType: TextInputType.name,
-                obscurePassword: null,
+                obscurePassword: false,
+                maxLines: null,
                 suffixIcon: null,
               ),
               addVerticalSpacing(25),
@@ -50,7 +51,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 controller: _lastNameController,
                 hintText: 'Last Name',
                 keyboardType: TextInputType.name,
-                obscurePassword: null,
+                obscurePassword: false,
+                maxLines: null,
                 suffixIcon: null,
               ),
               addVerticalSpacing(25),
@@ -58,7 +60,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 controller: _emailController,
                 hintText: 'Email',
                 keyboardType: TextInputType.emailAddress,
-                obscurePassword: null,
+                obscurePassword: false,
+                maxLines: null,
                 suffixIcon: null,
               ),
               addVerticalSpacing(25),
@@ -66,7 +69,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 controller: _phoneNumberController,
                 hintText: 'Phone Number',
                 keyboardType: TextInputType.phone,
-                obscurePassword: null,
+                obscurePassword: false,
+                maxLines: 1,
                 suffixIcon: null,
               ),
               addVerticalSpacing(25),
@@ -75,7 +79,12 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Password',
                 keyboardType: TextInputType.visiblePassword,
                 obscurePassword: isPasswordVisible,
-                suffixIcon: const Icon(Icons.visibility),
+                maxLines: null,
+                suffixIcon: GestureDetector( onTap: (){
+                  setState(() {
+                    isPasswordVisible = !isPasswordVisible;
+                  });
+                }, child: Icon(isPasswordVisible ? Icons.visibility : Icons.visibility_off)),
               ),
               addVerticalSpacing(25),
               TextFieldForm(
@@ -83,7 +92,12 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: 'Confirm Password',
                 keyboardType: TextInputType.visiblePassword,
                 obscurePassword: isConfirmPasswordVisible,
-                suffixIcon: const Icon(Icons.visibility),
+                maxLines: null,
+                suffixIcon: GestureDetector(onTap: (){
+                  setState(() {
+                    isConfirmPasswordVisible = ! isConfirmPasswordVisible;
+                  });
+                },  child:  isConfirmPasswordVisible? const Icon(Icons.visibility): const Icon(Icons.visibility_off)),
               ),
               addVerticalSpacing(50),
               ReusableButton(
