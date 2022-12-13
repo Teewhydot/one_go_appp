@@ -4,6 +4,8 @@ import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/custom_widgets/validators.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/forgot_password_screen.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class MailVerificationScreen extends StatefulWidget {
@@ -57,9 +59,10 @@ class _MailVerificationScreenState extends State<MailVerificationScreen> {
                             ),
                             addVerticalSpacing(20),
                             Padding(
-                              padding: const EdgeInsets.only(left: 46.0, right: 46.0),
+                              padding: const EdgeInsets.only(
+                                  left: 46.0, right: 46.0),
                               child: PinCodeTextField(
-                                validator: otpValidator,
+                                  validator: otpValidator,
                                   appContext: context,
                                   obscureText: false,
                                   keyboardType: TextInputType.phone,
@@ -72,7 +75,8 @@ class _MailVerificationScreenState extends State<MailVerificationScreen> {
                                 text: TextSpan(children: <TextSpan>[
                                   TextSpan(
                                       text: 'Didn\'t receive the code? ',
-                                      style: normalBlackStyle.copyWith(fontSize: 16)),
+                                      style: normalBlackStyle.copyWith(
+                                          fontSize: 16)),
                                   TextSpan(
                                       text: 'Resend OTP?',
                                       style: linkStyle.copyWith(fontSize: 15),
@@ -92,13 +96,15 @@ class _MailVerificationScreenState extends State<MailVerificationScreen> {
                         const Text(
                           'Verify',
                           style: boldWhiteStyle,
-                        ),
-                        () {
-                          if(_formKey.currentState!.validate()){
-                            Navigator.pushNamed(context, '/home');
-                          }
-                        },
-                        blueColor),
+                        ), () {
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                child: const ForgotPasswordPage(),
+                                type: PageTransitionType.rightToLeft));
+                      }
+                    }, blueColor),
                   ),
                 ],
               ),
