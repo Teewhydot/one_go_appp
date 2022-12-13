@@ -24,6 +24,7 @@ dependencies:
   page_transition: ^2.0.9
   shared_preferences: ^2.0.15
   google_fonts: ^3.0.1
+  pin_code_fields: ^7.4.0
 
 dev_dependencies:
   flutter_test:

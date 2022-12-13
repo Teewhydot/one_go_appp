@@ -69,6 +69,7 @@ const boldWhiteStyle = TextStyle(color: Colors.white,fontSize: 25.0, fontWeight:
 const boldBlackStyle = TextStyle(color: Colors.black,fontSize: 25.0, fontWeight: FontWeight.bold);
 const boldBlueStyle = TextStyle(color: Colors.blue,fontSize: 25.0, fontWeight: FontWeight.bold);
 const normalBlueStyle = TextStyle(color: Colors.blue,fontSize: 25.0, fontWeight: FontWeight.normal);
+const normalBlackStyle = TextStyle(color: Colors.black,fontSize: 15.0, fontWeight: FontWeight.normal);
 const blueColor = Color(0xFF4960F9);
 const greyColor = Color(0xFFA9A9A9);
 const blueTextColor = Color(0xFF2743fb);
