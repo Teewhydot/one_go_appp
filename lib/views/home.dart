@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/dropdown_searchable_button.dart';
+import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class Home extends StatefulWidget {
@@ -29,6 +30,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: Padding(
@@ -80,15 +82,25 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   addVerticalSpacing(20),
-                   DropDownButtonSearchable(hint: 'Select pickup location', itemsInList: items),
-                  Align(
-                      alignment: Alignment.bottomRight,
-                      child: Image.asset(Assets.figmaPngsArrowDown,
-                          height: 20)),
+                  DropDownButtonSearchable(
+                      hint: 'Select pickup location', itemsInList: items),
+                  addVerticalSpacing(5),
+                  Image.asset(Assets.figmaPngsArrowDown, height: 60),
+                  addVerticalSpacing(5),
+                  DropDownButtonSearchable(
+                      hint: 'Select destination location', itemsInList: items),
+                  addVerticalSpacing(30),
+                  DropDownButtonSearchable(
+                      hint: 'Number of seats', itemsInList: items),
+
 
                 ],
               ),
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20.0),
+            child: ReusableButton(const Text('Proceed',style: boldWhiteStyle,), (){}, blueColor),
           ),
         ],
       ),
