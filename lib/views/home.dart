@@ -39,68 +39,66 @@ class _HomeState extends State<Home> {
         key: _formKey,
         child: ListView(
           children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  children: [
-                    addVerticalSpacing(90),
-                    Align(
-                        alignment: Alignment.bottomRight,
-                        child: Image.asset(Assets.figmaPngsLargeMenuBar,
-                            height: 50)),
-                    addVerticalSpacing(20),
-                    const Align(
-                      alignment: Alignment.bottomLeft,
-                      child: CircleAvatar(
-                        radius: 70,
-                        backgroundImage: AssetImage(Assets.figmaPngsDollarSign),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                children: [
+                  addVerticalSpacing(90),
+                  Align(
+                      alignment: Alignment.bottomRight,
+                      child: Image.asset(Assets.figmaPngsLargeMenuBar,
+                          height: 50)),
+                  addVerticalSpacing(20),
+                  const Align(
+                    alignment: Alignment.bottomLeft,
+                    child: CircleAvatar(
+                      radius: 70,
+                      backgroundImage: AssetImage(Assets.figmaPngsDollarSign),
+                    ),
+                  ),
+                  addVerticalSpacing(40),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Row(children: [
+                      Text(
+                        _accountBalance.toString(),
+                        style: boldBlueStyle.copyWith(fontSize: 60),
                       ),
-                    ),
-                    addVerticalSpacing(40),
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Row(children: [
-                        Text(
-                          _accountBalance.toString(),
-                          style: boldBlueStyle.copyWith(fontSize: 60),
-                        ),
-                        addHorizontalSpacing(20),
-                        Text(
-                          'NGN',
-                          style: boldBlueStyle.copyWith(fontSize: 60),
-                        ),
-                      ]),
-                    ),
-                    addVerticalSpacing(20),
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Text(
-                        'Hello Mr. John Doe',
-                        style: boldBlueStyle.copyWith(fontSize: 40),
+                      addHorizontalSpacing(20),
+                      Text(
+                        'NGN',
+                        style: boldBlueStyle.copyWith(fontSize: 60),
                       ),
+                    ]),
+                  ),
+                  addVerticalSpacing(20),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      'Hello Mr. John Doe',
+                      style: boldBlueStyle.copyWith(fontSize: 40),
                     ),
-                    addVerticalSpacing(5),
-                    Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Text(
-                        'Lets book you up',
-                        style: boldBlueStyle.copyWith(fontSize: 40),
-                      ),
+                  ),
+                  addVerticalSpacing(5),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      'Lets book you up',
+                      style: boldBlueStyle.copyWith(fontSize: 40),
                     ),
-                    addVerticalSpacing(20),
-                    DropDownButtonSearchable(
-                        hint: 'Select pickup location', itemsInList: items),
-                    addVerticalSpacing(5),
-                    Image.asset(Assets.figmaPngsArrowDown, height: 60),
-                    addVerticalSpacing(5),
-                    DropDownButtonSearchable(
-                        hint: 'Select destination location', itemsInList: items),
-                    addVerticalSpacing(30),
-                    DropDownButtonSearchable(
-                        hint: 'Number of seats', itemsInList: noOfSeats),
-                  ],
-                ),
+                  ),
+                  addVerticalSpacing(20),
+                  DropDownButtonSearchable(
+                      hint: 'Select pickup location', itemsInList: items),
+                  addVerticalSpacing(5),
+                  Image.asset(Assets.figmaPngsArrowDown, height: 60),
+                  addVerticalSpacing(5),
+                  DropDownButtonSearchable(
+                      hint: 'Select destination location', itemsInList: items),
+                  addVerticalSpacing(30),
+                  DropDownButtonSearchable(
+                      hint: 'Number of seats', itemsInList: noOfSeats),
+                ],
               ),
             ),
             addVerticalSpacing(30),
