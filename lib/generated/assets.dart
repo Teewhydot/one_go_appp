@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String figmaPngsArrowDown = 'assets/figma_pngs/arrow_down.png';
   static const String figmaPngsChangePassword = 'assets/figma_pngs/change_password.png';
   static const String figmaPngsCustomGraphic = 'assets/figma_pngs/custom_graphic.png';
   static const String figmaPngsDollarSign = 'assets/figma_pngs/dollar_sign.png';

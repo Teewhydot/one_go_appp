@@ -81,6 +81,11 @@ class _HomeState extends State<Home> {
                   ),
                   addVerticalSpacing(20),
                    DropDownButtonSearchable(hint: 'Select pickup location', itemsInList: items),
+                  Align(
+                      alignment: Alignment.bottomRight,
+                      child: Image.asset(Assets.figmaPngsArrowDown,
+                          height: 20)),
+
                 ],
               ),
             ),
