@@ -3,6 +3,7 @@ import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class DrawerScreen extends StatelessWidget {
+  static const String id = 'DrawerScreen';
   const DrawerScreen({Key? key}) : super(key: key);
 
   @override

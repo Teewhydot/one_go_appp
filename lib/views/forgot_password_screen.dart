@@ -8,6 +8,7 @@ import 'package:page_transition/page_transition.dart';
 
 
 class ForgotPasswordPage extends StatefulWidget {
+  static const String id = 'Forgot password screen';
   const ForgotPasswordPage({Key? key}) : super(key: key);
 
   @override
@@ -68,7 +69,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                child: const Home(),
+                                child: Home(),
                                 type: PageTransitionType.rightToLeft));
                       }
                     }, blueColor),

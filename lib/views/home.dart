@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
+import 'package:one_go_app/custom_widgets/dropdown_searchable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  static const String id = 'Home';
+
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+  final List<String> items = [
+    'A_Item1',
+    'A_Item2',
+    'A_Item3',
+    'A_Item4',
+    'B_Item1',
+    'B_Item2',
+    'B_Item3',
+    'B_Item4',
+  ];
   final int _accountBalance = 0;
   @override
   Widget build(BuildContext context) {
@@ -66,6 +79,8 @@ class _HomeState extends State<Home> {
                       style: boldBlueStyle.copyWith(fontSize: 40),
                     ),
                   ),
+                  addVerticalSpacing(20),
+                   DropDownButtonSearchable(hint: 'Select pickup location', itemsInList: items),
                 ],
               ),
             ),

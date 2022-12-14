@@ -23,7 +23,7 @@ class TextFieldForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       controller: _controller,
       cursorColor: Colors.black,
       obscureText: obscurePassword,

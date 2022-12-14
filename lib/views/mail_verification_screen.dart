@@ -9,6 +9,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class MailVerificationScreen extends StatefulWidget {
+  static const String id = 'Mail verification screen';
   const MailVerificationScreen({Key? key}) : super(key: key);
 
   @override
