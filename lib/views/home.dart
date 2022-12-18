@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
               child: ReusableButton(const Text('Proceed',style: boldWhiteStyle,), (){
                 if(_formKey.currentState!.validate()){
                   // do something
-                }
+                } else {}
               }, blueColor),
             ),
           ],

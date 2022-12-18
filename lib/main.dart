@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/views/home.dart';
+import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
 import 'package:one_go_app/views/sign_up_page.dart';
 import 'package:one_go_app/views/welcome_page.dart';
@@ -20,12 +21,13 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Home.id,
+        initialRoute: NoShuttleScreen.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
           SignUpPage.id: (context) => const SignUpPage(),
           Home.id: (context) => const Home(),
+          NoShuttleScreen.id: (context) => const NoShuttleScreen(),
 
         },
       ),

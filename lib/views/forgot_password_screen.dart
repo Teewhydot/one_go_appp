@@ -69,7 +69,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                child: Home(),
+                                child: const Home(),
                                 type: PageTransitionType.rightToLeft));
                       }
                     }, blueColor),
