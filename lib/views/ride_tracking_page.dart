@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
+import 'package:one_go_app/views/custom_bottom_sheet.dart';
 
 class RideTrackingPage extends StatefulWidget {
   static const String id = 'Ride_tracking';
@@ -36,6 +37,7 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomSheet: const GoogleMapsBottomSheet(),
         backgroundColor: whiteColor,
         body: Stack(
           children: [

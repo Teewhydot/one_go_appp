@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:one_go_app/views/custom_bottom_sheet.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: RideTrackingPage.id,
+        initialRoute: GoogleMapsBottomSheet.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
           Terminals.id: (context)=> const Terminals(),
           SeatBookedSuccess.id: (context) => const SeatBookedSuccess(),
           RideTrackingPage.id: (context) => const RideTrackingPage(),
+          GoogleMapsBottomSheet.id: (context) => const GoogleMapsBottomSheet(),
 
         },
       ),

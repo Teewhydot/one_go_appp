@@ -3,6 +3,7 @@ class Assets {
   Assets._();
 
   static const String figmaPngsArrowDown = 'assets/figma_pngs/arrow_down.png';
+  static const String figmaPngsBusPhoto = 'assets/figma_pngs/bus_photo.png';
   static const String figmaPngsChangePassword = 'assets/figma_pngs/change_password.png';
   static const String figmaPngsCustomGraphic = 'assets/figma_pngs/custom_graphic.png';
   static const String figmaPngsDollarSign = 'assets/figma_pngs/dollar_sign.png';
@@ -19,6 +20,7 @@ class Assets {
   static const String figmaPngsOnegoImage = 'assets/figma_pngs/onego_image.png';
   static const String figmaPngsOtpVerification = 'assets/figma_pngs/otp_verification.png';
   static const String figmaPngsPadlock = 'assets/figma_pngs/padlock.png';
+  static const String figmaPngsPickupImage = 'assets/figma_pngs/pickup_image.png';
   static const String figmaPngsSignIn = 'assets/figma_pngs/sign_in.png';
   static const String figmaPngsTerminals = 'assets/figma_pngs/terminals.png';
   static const String figmaPngsTopUp = 'assets/figma_pngs/top_up.png';
