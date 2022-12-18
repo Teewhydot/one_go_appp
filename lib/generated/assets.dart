@@ -7,6 +7,7 @@ class Assets {
   static const String figmaPngsChangePassword = 'assets/figma_pngs/change_password.png';
   static const String figmaPngsCustomGraphic = 'assets/figma_pngs/custom_graphic.png';
   static const String figmaPngsDollarSign = 'assets/figma_pngs/dollar_sign.png';
+  static const String figmaPngsDriverPhoto = 'assets/figma_pngs/driver_photo.png';
   static const String figmaPngsEmail = 'assets/figma_pngs/email.png';
   static const String figmaPngsForgotPassword = 'assets/figma_pngs/forgot_password.png';
   static const String figmaPngsForgotPasswordOne = 'assets/figma_pngs/forgot_password_one.png';

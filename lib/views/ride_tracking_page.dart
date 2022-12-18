@@ -1,4 +1,4 @@
-import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -15,8 +15,6 @@ class RideTrackingPage extends StatefulWidget {
 
 class _RideTrackingPageState extends State<RideTrackingPage> {
   LocationData? currentLocation;
-  final Completer<GoogleMapController> _completerController =
-      Completer<GoogleMapController>();
   late GoogleMapController newGoogleMapController;
   void getCurrentDeviceLocation() async {
     Location location = Location();
