@@ -62,7 +62,7 @@ const accessDenied = SnackBar(
   backgroundColor: Colors.black,
   content: Text('Access not granted'),
 );
-
+const apiKey = 'AIzaSyB-_02SWJ-jaQrdeHrVha7x_AmK-mHs_Uw';
 const linkStyle = TextStyle(color: Colors.blue);
 const defaultStyle = TextStyle(color: Colors.grey, fontSize: 15.0);
 const boldWhiteStyle = TextStyle(color: Colors.white,fontSize: 25.0, fontWeight: FontWeight.bold);

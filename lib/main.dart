@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
+import 'package:one_go_app/views/ride_tracking_page.dart';
 import 'package:one_go_app/views/seat_booked_success.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
 import 'package:one_go_app/views/sign_up_page.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: SeatBookedSuccess.id,
+        initialRoute: RideTrackingPage.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
           NoShuttleScreen.id: (context) => const NoShuttleScreen(),
           Terminals.id: (context)=> const Terminals(),
           SeatBookedSuccess.id: (context) => const SeatBookedSuccess(),
+          RideTrackingPage.id: (context) => const RideTrackingPage(),
 
         },
       ),
