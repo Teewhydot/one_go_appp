@@ -68,23 +68,28 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                   borderRadius: BorderRadius.circular(15),
 
                 ),
-                child: SizedBox(
-                  height: 50,
-                  child: Row(
-                    children: const [
-                      SizedBox(
-                        width: 50,
-                        height: 50,
-                        child: Icon(
-                          Icons.close,
-                          color:blueColor,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Row(
+                      children: const [
+                        SizedBox(
+                          width: 50,
+                          height: 50,
+                          child: Icon(
+                            Icons.close,
+                            color:blueColor,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Center(child: Text('Cancel Ride', style: normalBlueStyle,)),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Center(child: Text('Cancel Ride', style: normalBlueStyle,)),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 )
