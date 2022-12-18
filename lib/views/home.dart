@@ -32,6 +32,20 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        toolbarHeight: 60,
+        backgroundColor: whiteColor,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            color: whiteColor,
+          ),
+          child:   Align(
+              alignment: Alignment.bottomLeft,
+              child: Image.asset(Assets.figmaPngsLargeMenuBar,
+                  height: 60, width: 60,)),
+        ),
+      ),
       resizeToAvoidBottomInset: false,
       drawer: const DrawerScreen(),
       backgroundColor: Colors.white,
@@ -43,12 +57,6 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
-                  addVerticalSpacing(90),
-                  Align(
-                      alignment: Alignment.bottomRight,
-                      child: Image.asset(Assets.figmaPngsLargeMenuBar,
-                          height: 50)),
-                  addVerticalSpacing(20),
                   const Align(
                     alignment: Alignment.bottomLeft,
                     child: CircleAvatar(

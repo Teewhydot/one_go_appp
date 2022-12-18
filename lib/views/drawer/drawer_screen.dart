@@ -3,20 +3,39 @@
 import 'package:flutter/material.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/no_shuttle.dart';
+import 'package:one_go_app/views/ride_tracking_page.dart';
 
 class DrawerScreen extends StatelessWidget {
   static const String id = 'DrawerScreen';
   const DrawerScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Drawer(
-        backgroundColor: Colors.white,
-        child: Column(
-          children: [
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Name', onTap: (){}),
-          ],
+  Widget build(BuildContext context) => SafeArea(
+    child: Drawer(
+          backgroundColor: Colors.white,
+          child: Column(
+            children: [
+              Container(
+                height: 200,
+                color: Colors.white
+              ),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Name', onTap: (){}),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Transactions', onTap: (){}),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Top up', onTap: (){}),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Email', onTap: (){}),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change Password', onTap: (){}),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change E-wallet pin', onTap: (){}),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Google Maps', onTap: (){
+                Navigator.pushNamed(context, RideTrackingPage.id);
+              }),
+              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'No available shuttle', onTap: (){
+                Navigator.pushNamed(context, NoShuttleScreen.id);
+              }),
+            ],
+          ),
         ),
-      );
+  );
 }
 
 class DrawerItem extends StatelessWidget {
@@ -32,19 +51,28 @@ class DrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        height: 50,
-        width: 400,
-        color: blueColor,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            image,
-            Text(
-              text,
-              style: normalBlackStyle,
-            ),
-          ],
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Container(
+          height: 50,
+          width: 400,
+          color: whiteColor,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  image,
+                  addHorizontalSpacing(10),
+                  Text(
+                    text,
+                    style: boldBlueStyle,
+                  ),
+                ],
+              ),
+              Container(),
+            ],
+          ),
         ),
       ),
     );

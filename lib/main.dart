@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: GoogleMapsBottomSheet.id,
+        initialRoute: WelcomePage.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
