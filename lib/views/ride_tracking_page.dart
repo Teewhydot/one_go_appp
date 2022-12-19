@@ -48,7 +48,7 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                     initialCameraPosition: CameraPosition(
                         target: LatLng(currentLocation!.latitude!,
                             currentLocation!.longitude!),
-                        zoom: 16.5),
+                        zoom: 19.5),
                     zoomControlsEnabled: true,
                     mapType: MapType.normal,
                     markers: {

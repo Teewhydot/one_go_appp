@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: WelcomePage.id,
+        initialRoute: Home.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -36,7 +36,6 @@ class MyApp extends StatelessWidget {
           SeatBookedSuccess.id: (context) => const SeatBookedSuccess(),
           RideTrackingPage.id: (context) => const RideTrackingPage(),
           GoogleMapsBottomSheet.id: (context) => const GoogleMapsBottomSheet(),
-
         },
       ),
     );

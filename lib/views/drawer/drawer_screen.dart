@@ -11,31 +11,37 @@ class DrawerScreen extends StatelessWidget {
   const DrawerScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => SafeArea(
-    child: Drawer(
-          backgroundColor: Colors.white,
-          child: Column(
-            children: [
-              Container(
+  Widget build(BuildContext context) {
+    final nav  = Navigator.of(context);
+    return SafeArea(
+
+      child: Drawer(
+        backgroundColor: Colors.white,
+        child: Column(
+          children: [
+            Container(
                 height: 200,
                 color: Colors.white
-              ),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Name', onTap: (){}),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Transactions', onTap: (){}),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Top up', onTap: (){}),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Email', onTap: (){}),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change Password', onTap: (){}),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change E-wallet pin', onTap: (){}),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Google Maps', onTap: (){
-                Navigator.pushNamed(context, RideTrackingPage.id);
-              }),
-              DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'No available shuttle', onTap: (){
-                Navigator.pushNamed(context, NoShuttleScreen.id);
-              }),
-            ],
-          ),
+            ),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Name', onTap: (){}),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Transactions', onTap: (){}),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Top up', onTap: (){}),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Email', onTap: (){}),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change Password', onTap: (){}),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change E-wallet pin', onTap: (){}),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Google Maps', onTap: ()async{
+              await Navigator.pushNamed(context, RideTrackingPage.id);
+              nav.pop();
+            }),
+            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'No available shuttle', onTap: ()async{
+            await  Navigator.pushNamed(context, NoShuttleScreen.id);
+              nav.pop();
+            }),
+          ],
         ),
-  );
+      ),
+    );
+  }
 }
 
 class DrawerItem extends StatelessWidget {
