@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
@@ -41,6 +41,10 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
             currentLocation == null
                 ? const Center(child: CircularProgressIndicator())
                 : GoogleMap(
+                    myLocationButtonEnabled: true,
+                    myLocationEnabled: true,
+                    zoomControlsEnabled: true,
+                    zoomGesturesEnabled: true,
                     onMapCreated: (controller) {
                       newGoogleMapController = controller;
                     },
@@ -48,7 +52,6 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                         target: LatLng(currentLocation!.latitude!,
                             currentLocation!.longitude!),
                         zoom: 16.5),
-                    zoomControlsEnabled: true,
                     mapType: MapType.normal,
                     markers: {
                       Marker(
@@ -59,40 +62,42 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                     },
                   ),
             Positioned(
-              top: 50,
-              left: 10,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(15),
-
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Row(
-                      children: const [
-                        SizedBox(
-                          width: 50,
-                          height: 50,
-                          child: Icon(
-                            Icons.close,
-                            color:blueColor,
+                top: 50,
+                left: 10,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(15.r),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: SizedBox(
+                      height: 5.0.h,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 50.w,
+                            height: 50.h,
+                            child: const Icon(
+                              Icons.close,
+                              color: blueColor,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Center(child: Text('Cancel Ride', style: normalBlueStyle,)),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.all(8.0.r),
+                            child: const Center(
+                                child: Text(
+                              'Cancel Ride',
+                              style: normalBlueStyle,
+                            )),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                )
-              ),
+                )),
             const GoogleMapsBottomSheet(),
           ],
         ));

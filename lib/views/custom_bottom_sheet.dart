@@ -24,7 +24,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
           padding: EdgeInsets.only(left: 20.0.r, right: 20.0.r),
           child: Container(
             height: deviceHeight / 11,
-            width: 200,
+            width: 200.w,
             decoration: BoxDecoration(
               color: Colors.green,
               borderRadius: BorderRadius.only(
@@ -47,26 +47,26 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
         child: Container(
           height: deviceHeight / 2,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30),
+              topLeft: Radius.circular(30.r),
+              topRight: Radius.circular(30.r),
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding:  EdgeInsets.all(10.0.r),
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)),
+                    topLeft: Radius.circular(30.r),
+                    topRight: Radius.circular(30.r)),
               ),
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0.r),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
@@ -81,11 +81,11 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: 100,
-                        height: 100,
+                        width: 100.w,
+                        height: 100.h,
                         decoration: BoxDecoration(
                           color: Colors.red,
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                           image: const DecorationImage(
                             image: AssetImage(Assets.figmaPngsDriverPhoto),
                             fit: BoxFit.cover,
@@ -107,10 +107,10 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
                           ),
                         ],
                       ),
-                      const CircleAvatar(
-                        radius: 30,
+                       CircleAvatar(
+                        radius: 30.r,
                         backgroundColor: Colors.white,
-                        child: Icon(
+                        child: const Icon(
                           Icons.call,
                           color: Colors.black,
                         ),
@@ -146,7 +146,7 @@ class BusInfoCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsets.all(3.0),
+            padding: EdgeInsets.all(3.0.r),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -173,8 +173,8 @@ class BusInfoCard extends StatelessWidget {
           ),
           Image.asset(
             Assets.figmaPngsBusPhoto,
-            height: 73,
-            width: 150,
+            height: 73.h,
+            width: 150.w,
           ),
         ],
       ),

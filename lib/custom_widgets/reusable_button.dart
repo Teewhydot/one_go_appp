@@ -24,7 +24,7 @@ class ReusableButton extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(buttonColor),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
+                          borderRadius: BorderRadius.circular(30.0.r),
                           side: const BorderSide(color: Colors.blue)))),
               onPressed: onPressed,
               child: Row(

@@ -4,6 +4,7 @@ import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/custom_widgets/validators.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/forgot_password_screen.dart';
 import 'package:one_go_app/views/mail_verification_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -88,7 +89,10 @@ class _SignInPageState extends State<SignInPage> {
                                     text: 'Forgot password?',
                                     style: linkStyle.copyWith(fontSize: 15),
                                     recognizer: TapGestureRecognizer()
-                                      ..onTap = () {}),
+                                      ..onTap = () {
+                                        Navigator.pushNamed(
+                                            context, ForgotPasswordPage.id);
+                                      }),
                               ]),
                             ),
                           ],

@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 
 class DropDownButtonSearchable extends StatefulWidget {
@@ -30,36 +31,36 @@ class _DropDownButtonSearchableState extends State<DropDownButtonSearchable> {
     return Center(
       child: DropdownButtonHideUnderline(
         child: DropdownButtonFormField2(
-          dropdownWidth: 300,
+          dropdownWidth: 300.w,
           decoration: InputDecoration(
             filled: true,
             fillColor: textFieldFillColor,
             isDense: true,
-            contentPadding: const EdgeInsets.all(10),
+            contentPadding:EdgeInsets.all(10.r),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(10.r),
             ),
           ),
           dropdownMaxHeight: 300,
           buttonWidth: double.infinity,
           dropdownDecoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
           ),
           buttonHeight: 50,
           hint: Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: 20.r),
             child: Text(widget.hint, style: normalBlackStyle),
           ),
           items: widget.itemsInList
               .map((item) => DropdownMenuItem<String>(
                     value: item,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                      padding: EdgeInsets.only(left: 20.r),
                       child: Text(
                         item,
-                        style: const TextStyle(
-                          fontSize: 14,
+                        style: TextStyle(
+                          fontSize: 14.sp,
                         ),
                       ),
                     ),
@@ -94,9 +95,9 @@ class _DropDownButtonSearchableState extends State<DropDownButtonSearchable> {
                   vertical: 8,
                 ),
                 hintText: 'Search for an item...',
-                hintStyle: const TextStyle(fontSize: 12),
+                hintStyle: TextStyle(fontSize: 12.sp),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                 ),
               ),
             ),

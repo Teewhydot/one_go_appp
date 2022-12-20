@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
@@ -47,7 +48,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       ),
                       addVerticalSpacing(20),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             hintText: 'Email',
@@ -59,7 +60,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0.r),
                     child: ReusableButton(
                         const Text(
                           'Verify',

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
@@ -20,7 +21,7 @@ class DrawerScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                height: 200,
+                height: 200.h,
                 color: Colors.white
             ),
             DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Name', onTap: (){}),
@@ -60,8 +61,8 @@ class DrawerItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Container(
-          height: 50,
-          width: 400,
+          height: 40.h,
+          width: 400.w,
           color: whiteColor,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
