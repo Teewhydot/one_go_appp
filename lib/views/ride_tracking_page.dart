@@ -35,7 +35,6 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // bottomSheet: const GoogleMapsBottomSheet(),
         backgroundColor: whiteColor,
         body: Stack(
           children: [
@@ -48,7 +47,7 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                     initialCameraPosition: CameraPosition(
                         target: LatLng(currentLocation!.latitude!,
                             currentLocation!.longitude!),
-                        zoom: 19.5),
+                        zoom: 16.5),
                     zoomControlsEnabled: true,
                     mapType: MapType.normal,
                     markers: {

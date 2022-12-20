@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:one_go_app/views/change_password_screen.dart';
 import 'package:one_go_app/views/custom_bottom_sheet.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Home.id,
+        initialRoute: ChangePasswordScreen.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           SeatBookedSuccess.id: (context) => const SeatBookedSuccess(),
           RideTrackingPage.id: (context) => const RideTrackingPage(),
           GoogleMapsBottomSheet.id: (context) => const GoogleMapsBottomSheet(),
+          ChangePasswordScreen.id: (context) => const ChangePasswordScreen(),
         },
       ),
     );
