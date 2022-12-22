@@ -90,6 +90,7 @@ class _SignInPageState extends State<SignInPage> {
                                     style: linkStyle.copyWith(fontSize: 15),
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
+                                      print('tapped');
                                         Navigator.pushNamed(
                                             context, ForgotPasswordPage.id);
                                       }),

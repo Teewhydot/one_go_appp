@@ -17,7 +17,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     bool isPasswordVisible = true;
-    String password = '';
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
@@ -41,7 +40,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         obscuringCharacter: '*',
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         onChanged: (value) {
-                          password = value;
                         },
                         decoration: InputDecoration(
                           suffixIcon: GestureDetector(
@@ -65,7 +63,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         obscuringCharacter: '*',
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         onChanged: (value) {
-                          password = value;
                         },
                         decoration: InputDecoration(
                           suffixIcon: GestureDetector(
@@ -89,7 +86,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         obscuringCharacter: '*',
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         onChanged: (value) {
-                          password = value;
                         },
                         decoration: InputDecoration(
                           suffixIcon: GestureDetector(
@@ -104,7 +100,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                               vertical: 10.0, horizontal: 20.0),
                         ),
                       ),
-                      addVerticalSpacing(30),
+                      addVerticalSpacing(60),
                       ReusableButton(const Text('Done',style: boldWhiteStyle,), (){}, blueColor)
                     ],
                   ),
