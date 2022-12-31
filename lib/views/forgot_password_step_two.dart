@@ -21,7 +21,7 @@ class _ForgotPasswordStepTwoState extends State<ForgotPasswordStepTwo> {
     return Scaffold(
       body: Column(
         children: [
-          Image.asset(Assets.figmaPngsChangePassword),
+          Image.asset(Assets.figmaPngsForgotPasswordTwo),
           Expanded(
               flex: 2,
               child: Padding(

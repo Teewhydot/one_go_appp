@@ -32,3 +32,17 @@ final addressValidator = MultiValidator([
   MinLengthValidator(2, errorText: 'Address is too short'),
   MaxLengthValidator(500, errorText: 'Address cannot be more than 500 characters')
 ]);
+
+final phoneValidator = MultiValidator([
+  RequiredValidator(errorText: 'Phone number is required'),
+  MinLengthValidator(10, errorText: 'Phone number is too short'),
+  MaxLengthValidator(10, errorText: 'Phone number is too long'),
+  PatternValidator(r'^[0-9]*$', errorText: 'Phone number must be digits only')
+]);
+
+final pinValidator = MultiValidator([
+  RequiredValidator(errorText: 'Pin code is required'),
+  MinLengthValidator(4, errorText: 'Pin code is too short'),
+  MaxLengthValidator(4, errorText: 'Pin code is too long'),
+  PatternValidator(r'^[0-9]*$', errorText: 'Pin code must be digits only')
+]);

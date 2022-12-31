@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/custom_widgets/validators.dart';
@@ -7,7 +8,6 @@ import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/forgot_password_screen.dart';
 import 'package:one_go_app/views/mail_verification_screen.dart';
 import 'package:page_transition/page_transition.dart';
-
 
 class SignInPage extends StatefulWidget {
   static const String id = 'SignInPage';
@@ -40,7 +40,10 @@ class _SignInPageState extends State<SignInPage> {
                   Column(
                     children: [
                       addVerticalSpacing(50),
-                      Image.asset(Assets.figmaPngsSignIn),
+                      Image.asset(
+                        Assets.figmaPngsSignIn,
+                        height: 256.h,
+                      ),
                       addVerticalSpacing(20),
                       Form(
                         key: _formKey,
@@ -49,7 +52,8 @@ class _SignInPageState extends State<SignInPage> {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             TextFormField(
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               validator: emailValidator,
                               onChanged: (value) {
                                 email = value;
@@ -65,7 +69,8 @@ class _SignInPageState extends State<SignInPage> {
                               validator: passwordValidator,
                               obscureText: isPasswordVisible,
                               obscuringCharacter: '*',
-                              autovalidateMode: AutovalidateMode.onUserInteraction,
+                              autovalidateMode:
+                                  AutovalidateMode.onUserInteraction,
                               onChanged: (value) {
                                 password = value;
                               },
@@ -90,7 +95,6 @@ class _SignInPageState extends State<SignInPage> {
                                     style: linkStyle.copyWith(fontSize: 15),
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
-                                      print('tapped');
                                         Navigator.pushNamed(
                                             context, ForgotPasswordPage.id);
                                       }),
@@ -107,11 +111,13 @@ class _SignInPageState extends State<SignInPage> {
                         const Text(
                           'Sign in',
                           style: boldWhiteStyle,
-                        ),
-                        () {
-                          Navigator.push(context, PageTransition(child: const MailVerificationScreen(), type: PageTransitionType.leftToRight));
-                        },
-                        blueColor),
+                        ), () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: const MailVerificationScreen(),
+                              type: PageTransitionType.leftToRight));
+                    }, blueColor),
                   ),
                 ],
               ),

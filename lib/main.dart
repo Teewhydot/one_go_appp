@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:one_go_app/views/change_ewallet_pin_screen.dart';
 import 'package:one_go_app/views/change_password_screen.dart';
 import 'package:one_go_app/views/custom_bottom_sheet.dart';
 import 'package:one_go_app/views/ewallet_pin_page.dart';
@@ -7,6 +8,7 @@ import 'package:one_go_app/views/forgot_password_screen.dart';
 import 'package:one_go_app/views/forgot_password_step_two.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
+import 'package:one_go_app/views/phone_verfication_screen.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
 import 'package:one_go_app/views/seat_booked_success.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       minTextAdapt: true,
       splitScreenMode: true,
-      designSize: const Size(414, 896),
+      designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
         initialRoute: WelcomePage.id,
@@ -44,6 +46,9 @@ class MyApp extends StatelessWidget {
           ForgotPasswordStepTwo.id: (context) => const ForgotPasswordStepTwo(),
           E_WalletPinPage.id: (context) => const E_WalletPinPage(),
           ForgotPasswordPage.id: (context) => const ForgotPasswordPage(),
+          PhoneVerificationScreen.id: (context) =>
+              const PhoneVerificationScreen(),
+          ChangeE_WalletPinPage.id: (context) => const ChangeE_WalletPinPage(),
         },
       ),
     );
