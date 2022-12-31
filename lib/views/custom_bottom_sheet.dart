@@ -15,6 +15,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
     return Stack(children: [
       Positioned(
         bottom: 350,
@@ -34,18 +35,18 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
             ),
             child: const Center(
                 child: Text(
-                  "Reaching in 30 minutes",
-                  style: boldWhiteStyle,
-                )),
+              "Reaching in 30 minutes",
+              style: boldWhiteStyle,
+            )),
           ),
         ),
       ),
       Positioned(
-        bottom: -130,
+        bottom: -50,
         right: 0,
         left: 0,
         child: Container(
-          height: deviceHeight / 2,
+          height: deviceHeight / 1.8,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -55,7 +56,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
             ),
           ),
           child: Padding(
-            padding:  EdgeInsets.all(10.0.r),
+            padding: EdgeInsets.all(10.0.r),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.blue,
@@ -65,64 +66,84 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.all(20.0.r),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text("To pay", style: boldWhiteStyle),
-                        Text("130", style: boldWhiteStyle),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.all(20.0.r),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const [
+                                Text("To pay", style: boldWhiteStyle),
+                                Text("130", style: boldWhiteStyle),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const Expanded(child: BusInfoCard()),
+                        addVerticalSpacing(5),
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                width: deviceWidth * 0.1,
+                                height: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  image: const DecorationImage(
+                                    image:
+                                        AssetImage(Assets.figmaPngsDriverPhoto),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text("Ben Peters",
+                                      style: normalBlackStyle),
+                                  Row(
+                                    children: [
+                                      const Text("4.7 stars",
+                                          style: normalBlackStyle),
+                                      addHorizontalSpacing(10),
+                                      const Text("2000+ rides",
+                                          style: normalBlackStyle),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              CircleAvatar(
+                                radius: 30.r,
+                                backgroundColor: Colors.white,
+                                child: const Icon(
+                                  Icons.call,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        addVerticalSpacing(10),
+                        const Divider(
+                          color: Colors.white,
+                          thickness: 1,
+                        ),
+                        Expanded(
+                          child: TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                "Check in",
+                                style: boldWhiteStyle,
+                              )),
+                        ),
                       ],
                     ),
                   ),
-                  const BusInfoCard(),
-                  addVerticalSpacing(5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        width: 100.w,
-                        height: 100.h,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(10.r),
-                          image: const DecorationImage(
-                            image: AssetImage(Assets.figmaPngsDriverPhoto),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text("Ben Peters", style: boldWhiteStyle),
-                          Row(
-                            children: [
-                              const Text("4.7 stars", style: boldWhiteStyle),
-                              addHorizontalSpacing(10),
-                              const Text("2000+ rides",
-                                  style: boldWhiteStyle),
-                            ],
-                          ),
-                        ],
-                      ),
-                       CircleAvatar(
-                        radius: 30.r,
-                        backgroundColor: Colors.white,
-                        child: const Icon(
-                          Icons.call,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                  addVerticalSpacing(10),
-                  const Divider(
-                    color: Colors.white,
-                    thickness: 1,
-                  ),
-                  TextButton(onPressed: (){}, child: const Text("Check in",style: boldWhiteStyle,)),
                 ],
               ),
             ),

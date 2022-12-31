@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/dropdown_searchable_button.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
@@ -40,10 +41,13 @@ class _HomeState extends State<Home> {
           decoration: const BoxDecoration(
             color: whiteColor,
           ),
-          child:   Align(
+          child: Align(
               alignment: Alignment.bottomLeft,
-              child: Image.asset(Assets.figmaPngsLargeMenuBar,
-                  height: 60, width: 60,)),
+              child: Image.asset(
+                Assets.figmaPngsLargeMenuBar,
+                height: 60,
+                width: 60,
+              )),
         ),
       ),
       resizeToAvoidBottomInset: false,
@@ -70,12 +74,12 @@ class _HomeState extends State<Home> {
                     child: Row(children: [
                       Text(
                         _accountBalance.toString(),
-                        style: boldBlueStyle.copyWith(fontSize: 60),
+                        style: boldBlueStyle.copyWith(fontSize: 60.sp),
                       ),
                       addHorizontalSpacing(20),
                       Text(
                         'NGN',
-                        style: boldBlueStyle.copyWith(fontSize: 60),
+                        style: boldBlueStyle.copyWith(fontSize: 27.sp),
                       ),
                     ]),
                   ),
@@ -111,9 +115,13 @@ class _HomeState extends State<Home> {
             ),
             addVerticalSpacing(30),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20.0,left: 15,right: 15),
-              child: ReusableButton(const Text('Proceed',style: boldWhiteStyle,), (){
-                if(_formKey.currentState!.validate()){
+              padding: const EdgeInsets.only(bottom: 20.0, left: 15, right: 15),
+              child: ReusableButton(
+                  const Text(
+                    'Proceed',
+                    style: boldWhiteStyle,
+                  ), () {
+                if (_formKey.currentState!.validate()) {
                   // do something
                 } else {}
               }, blueColor),
