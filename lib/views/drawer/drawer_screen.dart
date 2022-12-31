@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
@@ -13,31 +14,89 @@ class DrawerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final nav  = Navigator.of(context);
+    final nav = Navigator.of(context);
     return SafeArea(
-
       child: Drawer(
         backgroundColor: Colors.white,
         child: Column(
           children: [
             Container(
-                height: 200.h,
-                color: Colors.white
+              height: 150.h,
+              color: whiteColor,
+              child: Row(
+                children: [
+                  addHorizontalSpacing(10),
+                  Card(
+                    borderOnForeground: true,
+                    shape: SmoothRectangleBorder(
+                      borderRadius: SmoothBorderRadius(
+                        cornerRadius: 20,
+                        cornerSmoothing: 0.1,
+                      ),
+                    ),
+                    elevation: 5,
+                    child: Container(
+                      margin: const EdgeInsets.all(20),
+                      height: 40.h,
+                      width: 40.w,
+                      child: const Center(
+                        child: Icon(
+                          Icons.person,
+                          size: 40,
+                        ),
+                      ),
+                    ),
+                  ),
+                  addHorizontalSpacing(10),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('John Doe',
+                          style: boldBlackStyle.copyWith(fontSize: 21)),
+                      addVerticalSpacing(10),
+                      const Text(
+                        'ben@gmail.com',
+                        style: normalBlackStyle,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Name', onTap: (){}),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Transactions', onTap: (){}),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Top up', onTap: (){}),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Email', onTap: (){}),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change Password', onTap: (){}),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Change E-wallet pin', onTap: (){}),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'Google Maps', onTap: ()async{
-              await Navigator.pushNamed(context, RideTrackingPage.id);
-              nav.pop();
-            }),
-            DrawerItem(image: Image.asset(Assets.figmaPngsEmail), text:'No available shuttle', onTap: ()async{
-            await  Navigator.pushNamed(context, NoShuttleScreen.id);
-              nav.pop();
-            }),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'Profile',
+                onTap: () {}),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'Transactions',
+                onTap: () {}),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'Top up',
+                onTap: () {}),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'Change password',
+                onTap: () {}),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'Change E-wallet pin',
+                onTap: () {}),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'Google Maps',
+                onTap: () async {
+                  await Navigator.pushNamed(context, RideTrackingPage.id);
+                  nav.pop();
+                }),
+            DrawerItem(
+                image: Image.asset(Assets.figmaPngsEmail),
+                text: 'No available shuttle',
+                onTap: () async {
+                  await Navigator.pushNamed(context, NoShuttleScreen.id);
+                  nav.pop();
+                }),
           ],
         ),
       ),
@@ -63,17 +122,17 @@ class DrawerItem extends StatelessWidget {
         child: Container(
           height: 40.h,
           width: 400.w,
-          color: whiteColor,
+          decoration: BoxDecoration(
+              color: greyColor, borderRadius: BorderRadius.circular(15)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
-                  image,
                   addHorizontalSpacing(10),
                   Text(
                     text,
-                    style: boldBlueStyle,
+                    style: normalBlueStyle,
                   ),
                 ],
               ),

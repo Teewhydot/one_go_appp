@@ -13,40 +13,41 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: whiteColor,
-      body: Center(
-        child: Column(
-          children: [
-            Expanded(
-                child: Center(
-              child: Column(
-                children: [
-                  Expanded(child: Image.asset(Assets.figmaPngsOnegoImage)),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: ReusableButton(
-                        const Text(
-                          'Sign in',
-                          style: boldWhiteStyle,
-                        ), () {
-                      Navigator.pushNamed(context, SignInPage.id);
-                    }, blueColor),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: ReusableButton(
-                        const Text(
-                          'Sign up',
-                          style: normalBlueStyle,
-                        ), () {
-                      Navigator.pushNamed(context, SignUpPage.id);
-                    }, whiteColor),
-                  ),
-                  addVerticalSpacing(50),
-
-                ],
-              ),
-            )),
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              Expanded(
+                  child: Center(
+                child: Column(
+                  children: [
+                    Expanded(child: Image.asset(Assets.figmaPngsOnegoImage)),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: ReusableButton(
+                          const Text(
+                            'Sign in',
+                            style: boldWhiteStyle,
+                          ), () {
+                        Navigator.pushNamed(context, SignInPage.id);
+                      }, blueColor),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: ReusableButton(
+                          const Text(
+                            'Sign up',
+                            style: normalBlueStyle,
+                          ), () {
+                        Navigator.pushNamed(context, SignUpPage.id);
+                      }, whiteColor),
+                    ),
+                    addVerticalSpacing(50),
+                  ],
+                ),
+              )),
+            ],
+          ),
         ),
       ),
     );
