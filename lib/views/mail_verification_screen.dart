@@ -26,90 +26,95 @@ class _MailVerificationScreenState extends State<MailVerificationScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
+          child: Column(
+            children: [
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: Image.asset(
-                        Assets.figmaPngsOtpVerification,
-                        height: 233.h,
-                      ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Image.asset(
+                            Assets.figmaPngsOtpVerification,
+                            height: 233.h,
+                          ),
+                        ),
+                        Form(
+                          key: _formKey,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              addVerticalSpacing(20),
+                              const Center(
+                                child: Text(
+                                  'OTP Verification',
+                                  style: boldBlackStyle,
+                                ),
+                              ),
+                              addVerticalSpacing(20),
+                              Center(
+                                child: Text(
+                                  'Enter the OTP sent to your email',
+                                  style:
+                                      normalBlackStyle.copyWith(fontSize: 16),
+                                ),
+                              ),
+                              addVerticalSpacing(20),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 46.0, right: 46.0),
+                                child: PinCodeTextField(
+                                    validator: otpValidator,
+                                    appContext: context,
+                                    obscureText: false,
+                                    keyboardType: TextInputType.phone,
+                                    length: 4,
+                                    onChanged: (value) {}),
+                              ),
+                              addVerticalSpacing(40),
+                              Center(
+                                child: RichText(
+                                  text: TextSpan(children: <TextSpan>[
+                                    TextSpan(
+                                        text: 'Didn\'t receive the code? ',
+                                        style: normalBlackStyle.copyWith(
+                                            fontSize: 16)),
+                                    TextSpan(
+                                        text: 'Resend OTP?',
+                                        style: linkStyle.copyWith(fontSize: 15),
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {}),
+                                  ]),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    Form(
-                      key: _formKey,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          addVerticalSpacing(20),
-                          const Center(
-                            child: Text(
-                              'OTP Verification',
-                              style: boldBlackStyle,
-                            ),
-                          ),
-                          addVerticalSpacing(20),
-                          Center(
-                            child: Text(
-                              'Enter the OTP sent to your email',
-                              style: normalBlackStyle.copyWith(fontSize: 16),
-                            ),
-                          ),
-                          addVerticalSpacing(20),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 46.0, right: 46.0),
-                            child: PinCodeTextField(
-                                validator: otpValidator,
-                                appContext: context,
-                                obscureText: false,
-                                keyboardType: TextInputType.phone,
-                                length: 4,
-                                onChanged: (value) {}),
-                          ),
-                          addVerticalSpacing(40),
-                          Center(
-                            child: RichText(
-                              text: TextSpan(children: <TextSpan>[
-                                TextSpan(
-                                    text: 'Didn\'t receive the code? ',
-                                    style: normalBlackStyle.copyWith(
-                                        fontSize: 16)),
-                                TextSpan(
-                                    text: 'Resend OTP?',
-                                    style: linkStyle.copyWith(fontSize: 15),
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {}),
-                              ]),
-                            ),
-                          ),
-                        ],
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: ReusableButton(
+                          const Text(
+                            'Verify',
+                            style: boldWhiteStyle,
+                          ), () {
+                        if (_formKey.currentState!.validate()) {
+                          Navigator.push(
+                              context,
+                              PageTransition(
+                                  child: const ForgotPasswordPage(),
+                                  type: PageTransitionType.rightToLeft));
+                        }
+                      }, blueColor),
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: ReusableButton(
-                      const Text(
-                        'Verify',
-                        style: boldWhiteStyle,
-                      ), () {
-                    if (_formKey.currentState!.validate()) {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              child: const ForgotPasswordPage(),
-                              type: PageTransitionType.rightToLeft));
-                    }
-                  }, blueColor),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

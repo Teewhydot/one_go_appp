@@ -6,6 +6,7 @@ import 'package:one_go_app/views/custom_bottom_sheet.dart';
 import 'package:one_go_app/views/ewallet_pin_page.dart';
 import 'package:one_go_app/views/forgot_password_screen.dart';
 import 'package:one_go_app/views/forgot_password_step_two.dart';
+import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/phone_verfication_screen.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: WelcomePage.id,
+        initialRoute: History.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
           PhoneVerificationScreen.id: (context) =>
               const PhoneVerificationScreen(),
           ChangeE_WalletPinPage.id: (context) => const ChangeE_WalletPinPage(),
+          History.id: (context) => const History(),
         },
       ),
     );

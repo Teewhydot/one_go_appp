@@ -74,7 +74,7 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                       Navigator.pop(context);
                     },
                     child: SizedBox(
-                      height: 5.0.h,
+                      height: 40.0.h,
                       child: Row(
                         children: [
                           SizedBox(
