@@ -3,30 +3,46 @@ class Assets {
   Assets._();
 
   static const String figmaPngsArrowDown = 'assets/figma_pngs/arrow_down.png';
+  static const String figmaPngsBlueWallet = 'assets/figma_pngs/blue_wallet.png';
   static const String figmaPngsBusPhoto = 'assets/figma_pngs/bus_photo.png';
-  static const String figmaPngsChangePassword = 'assets/figma_pngs/change_password.png';
-  static const String figmaPngsCustomGraphic = 'assets/figma_pngs/custom_graphic.png';
+  static const String figmaPngsChangePassword =
+      'assets/figma_pngs/change_password.png';
+  static const String figmaPngsCustomGraphic =
+      'assets/figma_pngs/custom_graphic.png';
   static const String figmaPngsDollarSign = 'assets/figma_pngs/dollar_sign.png';
-  static const String figmaPngsDriverPhoto = 'assets/figma_pngs/driver_photo.png';
+  static const String figmaPngsDriverPhoto =
+      'assets/figma_pngs/driver_photo.png';
   static const String figmaPngsEmail = 'assets/figma_pngs/email.png';
-  static const String figmaPngsForgotPassword = 'assets/figma_pngs/forgot_password.png';
-  static const String figmaPngsForgotPasswordOne = 'assets/figma_pngs/forgot_password_one.png';
-  static const String figmaPngsForgotPasswordTwo = 'assets/figma_pngs/forgot_password_two.png';
-  static const String figmaPngsGreyDollarSign = 'assets/figma_pngs/grey_dollar_sign.png';
-  static const String figmaPngsHistoryIcon = 'assets/figma_pngs/history_icon.png';
-  static const String figmaPngsLargeGreenCheckmark = 'assets/figma_pngs/large_green_checkmark.png';
-  static const String figmaPngsLargeMenuBar = 'assets/figma_pngs/large_menu_bar.png';
+  static const String figmaPngsForgotPassword =
+      'assets/figma_pngs/forgot_password.png';
+  static const String figmaPngsForgotPasswordOne =
+      'assets/figma_pngs/forgot_password_one.png';
+  static const String figmaPngsForgotPasswordTwo =
+      'assets/figma_pngs/forgot_password_two.png';
+  static const String figmaPngsGreyDollarSign =
+      'assets/figma_pngs/grey_dollar_sign.png';
+  static const String figmaPngsHistoryIcon =
+      'assets/figma_pngs/history_icon.png';
+  static const String figmaPngsLargeGreenCheckmark =
+      'assets/figma_pngs/large_green_checkmark.png';
+  static const String figmaPngsLargeMenuBar =
+      'assets/figma_pngs/large_menu_bar.png';
   static const String figmaPngsNavChange = 'assets/figma_pngs/nav_change.png';
-  static const String figmaPngsNoAvailableBus = 'assets/figma_pngs/no_available_bus.png';
+  static const String figmaPngsNoAvailableBus =
+      'assets/figma_pngs/no_available_bus.png';
   static const String figmaPngsOnegoImage = 'assets/figma_pngs/onego_image.png';
-  static const String figmaPngsOtpVerification = 'assets/figma_pngs/otp_verification.png';
+  static const String figmaPngsOtpVerification =
+      'assets/figma_pngs/otp_verification.png';
   static const String figmaPngsPadlock = 'assets/figma_pngs/padlock.png';
-  static const String figmaPngsPickupImage = 'assets/figma_pngs/pickup_image.png';
+  static const String figmaPngsPickupImage =
+      'assets/figma_pngs/pickup_image.png';
+  static const String figmaPngsProfilePhoto =
+      'assets/figma_pngs/profile_photo.png';
   static const String figmaPngsSignIn = 'assets/figma_pngs/sign_in.png';
   static const String figmaPngsTerminals = 'assets/figma_pngs/terminals.png';
   static const String figmaPngsTopUp = 'assets/figma_pngs/top_up.png';
   static const String figmaPngsTopUpNav = 'assets/figma_pngs/top_up_nav.png';
   static const String figmaPngsWallet = 'assets/figma_pngs/wallet.png';
-  static const String figmaPngsWalletPinPage = 'assets/figma_pngs/wallet_pin_page.png';
-
+  static const String figmaPngsWalletPinPage =
+      'assets/figma_pngs/wallet_pin_page.png';
 }
