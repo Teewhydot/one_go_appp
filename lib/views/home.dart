@@ -34,6 +34,17 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.menu, color: Colors.transparent),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
         elevation: 0,
         toolbarHeight: 60,
         backgroundColor: whiteColor,
@@ -58,7 +69,7 @@ class _HomeState extends State<Home> {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(15.0.r),
               child: Column(
                 children: [
                   const Align(
@@ -88,7 +99,7 @@ class _HomeState extends State<Home> {
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'Hello Mr. John Doe',
-                      style: boldBlueStyle.copyWith(fontSize: 40),
+                      style: boldBlueStyle.copyWith(fontSize: 27.sp),
                     ),
                   ),
                   addVerticalSpacing(5),
@@ -96,7 +107,7 @@ class _HomeState extends State<Home> {
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'Lets book you up',
-                      style: boldBlueStyle.copyWith(fontSize: 40),
+                      style: boldBlueStyle.copyWith(fontSize: 27.sp),
                     ),
                   ),
                   addVerticalSpacing(20),

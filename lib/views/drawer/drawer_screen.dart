@@ -6,8 +6,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/change_password_screen.dart';
+import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
+import 'package:one_go_app/views/top_up_page.dart';
 
 class DrawerScreen extends StatelessWidget {
   static const String id = 'DrawerScreen';
@@ -74,15 +77,21 @@ class DrawerScreen extends StatelessWidget {
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Transactions',
-                    onTap: () {}),
+                    onTap: () {
+                      nav.popAndPushNamed(History.id);
+                    }),
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Top up',
-                    onTap: () {}),
+                    onTap: () {
+                      nav.popAndPushNamed(TopUpPage.id);
+                    }),
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Change password',
-                    onTap: () {}),
+                    onTap: () {
+                      nav.popAndPushNamed(ChangePasswordScreen.id);
+                    }),
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Change E-wallet pin',
@@ -90,16 +99,14 @@ class DrawerScreen extends StatelessWidget {
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Google Maps',
-                    onTap: () async {
-                      await Navigator.pushNamed(context, RideTrackingPage.id);
-                      nav.pop();
+                    onTap: () {
+                      nav.popAndPushNamed(RideTrackingPage.id);
                     }),
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'No available shuttle',
-                    onTap: () async {
-                      await Navigator.pushNamed(context, NoShuttleScreen.id);
-                      nav.pop();
+                    onTap: () {
+                      nav.popAndPushNamed(NoShuttleScreen.id);
                     }),
               ],
             ),

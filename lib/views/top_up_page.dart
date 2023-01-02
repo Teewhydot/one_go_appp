@@ -4,6 +4,8 @@ import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 
+enum Platform { Paystack, Flutterwave }
+
 class TopUpPage extends StatelessWidget {
   static const String id = 'Top up page';
   const TopUpPage({Key? key}) : super(key: key);
