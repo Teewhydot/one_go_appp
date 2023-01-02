@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/top_up_step_two.dart';
 
 enum Platform { Paystack, Flutterwave }
 
@@ -55,15 +56,25 @@ class TopUpPage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(
                       left: 20, right: 20, top: 10, bottom: 10),
-                  child: Container(
-                    height: 70,
-                    width: 150,
-                    decoration: const BoxDecoration(
-                        color: greyColor, borderRadius: borderRadius30All),
-                    child: const Center(
-                      child: Text(
-                        'Paystack',
-                        style: boldBlackStyle,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TopUpStepTwo(
+                                    selectedPlatform: Platform.Paystack,
+                                  )));
+                    },
+                    child: Container(
+                      height: 70,
+                      width: 150,
+                      decoration: const BoxDecoration(
+                          color: greyColor, borderRadius: borderRadius30All),
+                      child: const Center(
+                        child: Text(
+                          'Paystack',
+                          style: boldBlackStyle,
+                        ),
                       ),
                     ),
                   ),
@@ -75,15 +86,25 @@ class TopUpPage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(
                       left: 20, right: 20, top: 10, bottom: 10),
-                  child: Container(
-                    height: 70,
-                    width: 150,
-                    decoration: const BoxDecoration(
-                        color: greyColor, borderRadius: borderRadius30All),
-                    child: const Center(
-                      child: Text(
-                        'Flutterwave',
-                        style: boldBlackStyle,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TopUpStepTwo(
+                                    selectedPlatform: Platform.Flutterwave,
+                                  )));
+                    },
+                    child: Container(
+                      height: 70,
+                      width: 150,
+                      decoration: const BoxDecoration(
+                          color: greyColor, borderRadius: borderRadius30All),
+                      child: const Center(
+                        child: Text(
+                          'Flutterwave',
+                          style: boldBlackStyle,
+                        ),
                       ),
                     ),
                   ),

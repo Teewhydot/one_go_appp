@@ -16,7 +16,6 @@ import 'package:one_go_app/views/sign_in_page.dart';
 import 'package:one_go_app/views/sign_up_page.dart';
 import 'package:one_go_app/views/terminals_page.dart';
 import 'package:one_go_app/views/top_up_page.dart';
-import 'package:one_go_app/views/top_up_step_two.dart';
 import 'package:one_go_app/views/welcome_page.dart';
 
 void main() {
@@ -51,7 +50,6 @@ class MyApp extends StatelessWidget {
           ForgotPasswordPage.id: (context) => const ForgotPasswordPage(),
           PhoneVerificationScreen.id: (context) =>
               const PhoneVerificationScreen(),
-          TopUpStepTwo.id: (context) => const TopUpStepTwo(),
           TopUpPage.id: (context) => const TopUpPage(),
           ChangeE_WalletPinPage.id: (context) => const ChangeE_WalletPinPage(),
           History.id: (context) => const History(),

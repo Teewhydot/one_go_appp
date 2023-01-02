@@ -3,10 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/constants.dart';
 import 'package:one_go_app/custom_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/top_up_page.dart';
 
 class TopUpStepTwo extends StatefulWidget {
   static const String id = 'Top up step two';
-  const TopUpStepTwo({Key? key}) : super(key: key);
+  final Platform selectedPlatform;
+
+  const TopUpStepTwo({Key? key, required this.selectedPlatform})
+      : super(key: key);
 
   @override
   State<TopUpStepTwo> createState() => _TopUpStepTwoState();
@@ -14,7 +18,6 @@ class TopUpStepTwo extends StatefulWidget {
 
 class _TopUpStepTwoState extends State<TopUpStepTwo> {
   final TextEditingController _phoneNumberController = TextEditingController();
-  int selectedPlatform = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +93,7 @@ class _TopUpStepTwoState extends State<TopUpStepTwo> {
               ),
             ),
             // paystack or flutter wave
-            selectedPlatform == 0
+            widget.selectedPlatform == Platform.Paystack
                 ? Positioned(
                     top: 500,
                     left: 0,
