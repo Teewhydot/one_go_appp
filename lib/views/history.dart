@@ -102,28 +102,28 @@ class History extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                   child: ListView(
-                    children: [
-                      const HistoryWidget(
+                    children: const [
+                      HistoryWidget(
                         currentLocation: 'Current Location',
                         destination: 'Destination',
                         price: '600',
                       ),
-                      const HistoryWidget(
+                      HistoryWidget(
                         currentLocation: 'Current Location',
                         destination: 'Destination',
                         price: '600',
                       ),
-                      const HistoryWidget(
+                      HistoryWidget(
                         currentLocation: 'Current Location',
                         destination: 'Destination',
                         price: '600',
                       ),
-                      const HistoryWidget(
+                      HistoryWidget(
                         currentLocation: 'Current Location',
                         destination: 'Destination',
                         price: '600',
                       ),
-                      const HistoryWidget(
+                      HistoryWidget(
                         currentLocation: 'Current Location',
                         destination: 'Destination',
                         price: '600',

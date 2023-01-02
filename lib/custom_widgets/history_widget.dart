@@ -17,7 +17,6 @@ class HistoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final deviceHeight = MediaQuery.of(context).size.height;
     final deviceWidth = MediaQuery.of(context).size.width;
 
     return Padding(
@@ -73,7 +72,7 @@ class HistoryWidget extends StatelessWidget {
                   ),
                   addHorizontalSpacing(10),
                   Text(
-                    '$price',
+                    price,
                     style: normalBlackStyle.copyWith(fontSize: 20.sp),
                   ),
                   addHorizontalSpacing(20),
