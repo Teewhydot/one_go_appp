@@ -78,6 +78,7 @@ const normalBlackStyle =
 
 const normalWhiteStyle =
     TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.normal);
+const busNumberTextColor = Color(0xff314fa3);
 const blueColor = Color(0xFF4960F9);
 const greyColor = Color(0xFFA9A9A9);
 const blueTextColor = Color(0xFF2743fb);

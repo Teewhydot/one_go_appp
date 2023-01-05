@@ -16,9 +16,8 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
     final deviceWidth = MediaQuery.of(context).size.width;
-    final totalBottomSheetHeight = deviceHeight / 1.8;
+    final totalBottomSheetHeight = deviceHeight / 2.5;
     return Stack(children: [
-      //green container
       Positioned(
         bottom: -50,
         left: 0,
@@ -26,19 +25,27 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
         child: Padding(
           padding: EdgeInsets.only(left: 20.0.r, right: 20.0.r),
           child: Container(
-            height: totalBottomSheetHeight + 50,
+            height: totalBottomSheetHeight + 50.h,
             width: 200.w,
             decoration: const BoxDecoration(
               color: Colors.green,
               borderRadius: borderRadius30,
             ),
-            child: const Align(
+            child: Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: EdgeInsets.all(15.0),
-                child: Text(
-                  "Reaching in 30 minutes",
-                  style: normalWhiteStyle,
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.bolt,
+                      color: whiteColor,
+                    ),
+                    Text(
+                      " Reaching in 30 minutes",
+                      style: normalWhiteStyle,
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -65,31 +72,40 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
                 color: Colors.blue,
                 borderRadius: borderRadius30,
               ),
-              child: SizedBox(
-                height: totalBottomSheetHeight * 0.8,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 20, right: 20, top: 15, bottom: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Text("To pay", style: boldWhiteStyle),
-                          Text("130", style: boldWhiteStyle),
+              child: ListView(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          addHorizontalSpacing(5),
+                          const Text("To pay", style: normalWhiteStyle),
                         ],
                       ),
-                    ),
-                    const BusInfoCard(),
-                    addVerticalSpacing(5),
-                    DriverInfoCard(deviceWidth: deviceWidth),
-                    addVerticalSpacing(5),
-                    const Divider(
-                      color: Colors.white,
-                      thickness: 1,
-                    ),
-                  ],
-                ),
+                      Row(
+                        children: [
+                          const Text("130", style: boldWhiteStyle),
+                          addHorizontalSpacing(5),
+                        ],
+                      ),
+                    ],
+                  ),
+                  addVerticalSpacing(5),
+                  const BusInfoCard(),
+                  addVerticalSpacing(10),
+                  DriverInfoCard(deviceWidth: deviceWidth),
+                  const Divider(
+                    color: Colors.white,
+                    thickness: 1,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Check in',
+                        style: boldWhiteStyle,
+                      )),
+                ],
               ),
             ),
           ),
@@ -118,6 +134,8 @@ class DriverInfoCard extends StatelessWidget {
               width: deviceWidth * 0.12,
               height: 48.h,
               decoration: BoxDecoration(
+                color: whiteColor,
+                border: Border.all(color: whiteColor),
                 borderRadius: BorderRadius.circular(10.r),
                 image: const DecorationImage(
                   image: AssetImage(Assets.figmaPngsDriverPhoto),
@@ -178,9 +196,11 @@ class BusInfoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("MG ZS EV", style: boldBlueStyle),
+                Text("MG ZS EV",
+                    style: boldBlueStyle.copyWith(fontSize: 12.sp)),
                 Text("DL09 EV8987",
-                    style: normalBlackStyle.copyWith(fontSize: 22.sp)),
+                    style: normalBlackStyle.copyWith(
+                        fontSize: 22.sp, color: busNumberTextColor)),
                 Container(
                   height: 25.h,
                   width: 170.w,
@@ -191,7 +211,7 @@ class BusInfoCard extends StatelessWidget {
                   child: const Center(
                     child: Text(
                       "208kg CO Saved",
-                      style: boldWhiteStyle,
+                      style: normalWhiteStyle,
                     ),
                   ),
                 ),

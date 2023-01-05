@@ -87,10 +87,10 @@ class _RideTrackingPageState extends State<RideTrackingPage> {
                           ),
                           Padding(
                             padding: EdgeInsets.all(8.0.r),
-                            child: const Center(
+                            child: Center(
                                 child: Text(
                               'Cancel Ride',
-                              style: normalBlueStyle,
+                              style: normalBlueStyle.copyWith(fontSize: 15.sp),
                             )),
                           ),
                         ],

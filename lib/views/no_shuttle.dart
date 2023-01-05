@@ -35,7 +35,13 @@ class NoShuttleScreen extends StatelessWidget {
                 () {},
                 blueColor),
           ),
-          TextButton(onPressed: (){}, child:  const Text('Continue',style: boldBlueStyle,),)
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              'Continue',
+              style: boldBlueStyle,
+            ),
+          )
         ],
       ),
     );

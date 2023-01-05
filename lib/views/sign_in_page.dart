@@ -29,10 +29,10 @@ class _SignInPageState extends State<SignInPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: whiteColor,
-      body: Column(
-        children: [
-          Expanded(
-            child: Padding(
+      body: SafeArea(
+        child: ListView(
+          children: [
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,11 +119,12 @@ class _SignInPageState extends State<SignInPage> {
                               type: PageTransitionType.leftToRight));
                     }, blueColor),
                   ),
+                  addVerticalSpacing(200),
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

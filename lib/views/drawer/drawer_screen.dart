@@ -22,8 +22,7 @@ class DrawerScreen extends StatelessWidget {
     return SafeArea(
       child: Drawer(
         backgroundColor: Colors.white,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: ListView(
           children: [
             Column(
               children: [
@@ -110,6 +109,7 @@ class DrawerScreen extends StatelessWidget {
                     }),
               ],
             ),
+            addVerticalSpacing(50),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: ReusableButton(

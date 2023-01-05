@@ -98,7 +98,7 @@ class History extends StatelessWidget {
                     )),
               ),
               Expanded(
-                flex: 6,
+                flex: 5,
                 child: Container(
                   color: Colors.white,
                   child: ListView(

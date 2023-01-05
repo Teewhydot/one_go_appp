@@ -23,82 +23,77 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       body: SafeArea(
         child: Form(
           key: _formKey,
-          child: Column(
+          child: ListView(
             children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      children: [
-                        Image.asset(
-                          Assets.figmaPngsForgotPassword,
-                          fit: BoxFit.fitWidth,
-                        ),
-                        addVerticalSpacing(10),
-                        const Center(
-                          child: Text(
-                            'Forgot Password',
-                            style: boldBlackStyle,
-                          ),
-                        ),
-                        addVerticalSpacing(10),
-                        Center(
-                          child: Text(
-                            'Enter your email to reset your password',
-                            style: normalBlackStyle.copyWith(fontSize: 16),
-                          ),
-                        ),
-                        addVerticalSpacing(10),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20.0.w),
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                              hintText: 'Email',
-                              hintStyle: normalBlackStyle,
-                            ),
-                          ),
-                        ),
-                        addVerticalSpacing(10),
-                      ],
+              Column(
+                children: [
+                  Image.asset(
+                    Assets.figmaPngsForgotPassword,
+                    fit: BoxFit.fitWidth,
+                  ),
+                  addVerticalSpacing(10),
+                  const Center(
+                    child: Text(
+                      'Forgot Password',
+                      style: boldBlackStyle,
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(20.0.r),
-                      child: ReusableButton(
-                          const Text(
-                            'Verify',
-                            style: boldWhiteStyle,
-                          ), () {
-                        if (_formKey.currentState!.validate()) {
-                          Navigator.push(
-                              context,
-                              PageTransition(
-                                  child: const Home(),
-                                  type: PageTransitionType.rightToLeft));
-                        }
-                      }, blueColor),
+                  ),
+                  addVerticalSpacing(10),
+                  Center(
+                    child: Text(
+                      'Enter your email to reset your password',
+                      style: normalBlackStyle.copyWith(fontSize: 16),
                     ),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   children: [
-                    //     const Text(
-                    //       'Don\'t have an account?',
-                    //       style: normalBlackStyle,
-                    //     ),
-                    //     TextButton(
-                    //       onPressed: () {
-                    //         Navigator.pushNamed(context, SignUpPage.id);
-                    //       },
-                    //       child: const Text(
-                    //         'Sign Up',
-                    //         style: boldBlackStyle,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                  ],
-                ),
+                  ),
+                  addVerticalSpacing(10),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.0.w),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        hintText: 'Email',
+                        hintStyle: normalBlackStyle,
+                      ),
+                    ),
+                  ),
+                  addVerticalSpacing(10),
+                ],
               ),
+              addVerticalSpacing(50),
+              Padding(
+                padding: EdgeInsets.all(20.0.r),
+                child: ReusableButton(
+                    const Text(
+                      'Verify',
+                      style: boldWhiteStyle,
+                    ), () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            child: const Home(),
+                            type: PageTransitionType.rightToLeft));
+                  }
+                }, blueColor),
+              ),
+              addVerticalSpacing(100),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     const Text(
+              //       'Don\'t have an account?',
+              //       style: normalBlackStyle,
+              //     ),
+              //     TextButton(
+              //       onPressed: () {
+              //         Navigator.pushNamed(context, SignUpPage.id);
+              //       },
+              //       child: const Text(
+              //         'Sign Up',
+              //         style: boldBlackStyle,
+              //       ),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ),

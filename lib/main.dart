@@ -9,7 +9,7 @@ import 'package:one_go_app/views/forgot_password_step_two.dart';
 import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
-import 'package:one_go_app/views/phone_verfication_screen.dart';
+import 'package:one_go_app/views/phone_verification_screen.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
 import 'package:one_go_app/views/seat_booked_success.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Home.id,
+        initialRoute: WelcomePage.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
