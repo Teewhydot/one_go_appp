@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
-import 'package:one_go_app/views/custom_bottom_sheet.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/custom_bottom_sheet.dart';
 
 class RideTrackingPage extends StatefulWidget {
   static const String id = 'Ride_tracking';
