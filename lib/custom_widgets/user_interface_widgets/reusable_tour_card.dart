@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 
 class ReusableTourCard extends StatelessWidget {
   final image;
@@ -54,19 +54,19 @@ class ReusableTourCard extends StatelessWidget {
                     padding: EdgeInsets.all(8.0.r),
                     child: Text(
                       nameOfEvent,
-                      style:TextStyle(
+                      style: TextStyle(
                         fontSize: 17.sp,
                       ),
                     ),
                   ),
-               addVerticalSpacing(10),
+                  addVerticalSpacing(10),
                   Padding(
                     padding: EdgeInsets.all(8.0.r),
                     child: Text(dateOfEvent),
                   ),
                 ],
               ),
-            addVerticalSpacing(20),
+              addVerticalSpacing(20),
             ],
           ),
         ),

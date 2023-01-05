@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 
 class ReusableButton extends StatelessWidget {
   final buttonText;

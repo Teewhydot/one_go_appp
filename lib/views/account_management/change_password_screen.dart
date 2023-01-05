@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-import 'package:one_go_app/custom_widgets/reusable_button.dart';
-import 'package:one_go_app/custom_widgets/validators.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/validators.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
@@ -30,17 +30,22 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                   child: ListView(
                     children: [
                       addVerticalSpacing(10),
-                      Text("Change your password", style: boldBlackStyle.copyWith(fontSize: 30.sp),),
+                      Text(
+                        "Change your password",
+                        style: boldBlackStyle.copyWith(fontSize: 30.sp),
+                      ),
                       addVerticalSpacing(30),
-                      Text("Old password", style: boldBlackStyle.copyWith(fontSize: 20.sp),),
+                      Text(
+                        "Old password",
+                        style: boldBlackStyle.copyWith(fontSize: 20.sp),
+                      ),
                       addVerticalSpacing(10),
                       TextFormField(
                         validator: passwordValidator,
                         obscureText: isPasswordVisible,
                         obscuringCharacter: '*',
                         autovalidateMode: AutovalidateMode.onUserInteraction,
-                        onChanged: (value) {
-                        },
+                        onChanged: (value) {},
                         decoration: InputDecoration(
                           suffixIcon: GestureDetector(
                               onTap: () {
@@ -55,15 +60,17 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         ),
                       ),
                       addVerticalSpacing(30),
-                      Text("New password", style: boldBlackStyle.copyWith(fontSize: 20.sp),),
+                      Text(
+                        "New password",
+                        style: boldBlackStyle.copyWith(fontSize: 20.sp),
+                      ),
                       addVerticalSpacing(10),
                       TextFormField(
                         validator: passwordValidator,
                         obscureText: isPasswordVisible,
                         obscuringCharacter: '*',
                         autovalidateMode: AutovalidateMode.onUserInteraction,
-                        onChanged: (value) {
-                        },
+                        onChanged: (value) {},
                         decoration: InputDecoration(
                           suffixIcon: GestureDetector(
                               onTap: () {
@@ -78,15 +85,17 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         ),
                       ),
                       addVerticalSpacing(30),
-                      Text("Confirm new password", style: boldBlackStyle.copyWith(fontSize: 20.sp),),
+                      Text(
+                        "Confirm new password",
+                        style: boldBlackStyle.copyWith(fontSize: 20.sp),
+                      ),
                       addVerticalSpacing(10),
                       TextFormField(
                         validator: passwordValidator,
                         obscureText: isPasswordVisible,
                         obscuringCharacter: '*',
                         autovalidateMode: AutovalidateMode.onUserInteraction,
-                        onChanged: (value) {
-                        },
+                        onChanged: (value) {},
                         decoration: InputDecoration(
                           suffixIcon: GestureDetector(
                               onTap: () {
@@ -101,7 +110,13 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         ),
                       ),
                       addVerticalSpacing(60),
-                      ReusableButton(const Text('Done',style: boldWhiteStyle,), (){}, blueColor)
+                      ReusableButton(
+                          const Text(
+                            'Done',
+                            style: boldWhiteStyle,
+                          ),
+                          () {},
+                          blueColor)
                     ],
                   ),
                 )),

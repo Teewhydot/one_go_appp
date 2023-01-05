@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-import 'package:one_go_app/custom_widgets/reusable_button.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class SeatBookedSuccess extends StatelessWidget {
@@ -17,7 +17,7 @@ class SeatBookedSuccess extends StatelessWidget {
         addVerticalSpacing(30),
         const Text(
           'You have successfully booked your seat',
-          style:boldBlueStyle,
+          style: boldBlueStyle,
         ),
         addVerticalSpacing(30),
         const Align(
@@ -30,10 +30,14 @@ class SeatBookedSuccess extends StatelessWidget {
         addVerticalSpacing(60),
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: ReusableButton(const Text('Proceed',style: boldWhiteStyle,), (){}, blueColor),
+          child: ReusableButton(
+              const Text(
+                'Proceed',
+                style: boldWhiteStyle,
+              ),
+              () {},
+              blueColor),
         ),
-
-
       ],
     ));
   }

@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 
 class TextFieldForm extends StatelessWidget {
   const TextFieldForm(
       {super.key,
-        required TextEditingController controller,
-        required this.hintText,
-        required this.obscurePassword,
-        required this.suffixIcon,
-        required this.maxLines,
-        required this.keyboardType})
+      required TextEditingController controller,
+      required this.hintText,
+      required this.obscurePassword,
+      required this.suffixIcon,
+      required this.maxLines,
+      required this.keyboardType})
       : _controller = controller;
 
   final TextEditingController _controller;
@@ -42,7 +41,7 @@ class TextFieldForm extends StatelessWidget {
         ),
         hintText: hintText,
         contentPadding:
-        EdgeInsets.symmetric(vertical: 10.0.h, horizontal: 20.0.w),
+            EdgeInsets.symmetric(vertical: 10.0.h, horizontal: 20.0.w),
       ),
     );
   }

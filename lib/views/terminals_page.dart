@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class Terminals extends StatelessWidget {
@@ -26,19 +26,40 @@ class Terminals extends StatelessWidget {
                       ),
                     ),
                     addVerticalSpacing(10),
-                     TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                     addVerticalSpacing(10),
-                    TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                     addVerticalSpacing(10),
-                    TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                     addVerticalSpacing(10),
-                    TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                     addVerticalSpacing(10),
-                    TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                     addVerticalSpacing(10),
-                    TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                     addVerticalSpacing(10),
-                    TerminalWidget(terminalName: 'School Bus', onTap: (){},),
+                    TerminalWidget(
+                      terminalName: 'School Bus',
+                      onTap: () {},
+                    ),
                   ],
                 )),
           ],
@@ -49,15 +70,15 @@ class Terminals extends StatelessWidget {
 }
 
 class TerminalWidget extends StatelessWidget {
-final String terminalName;
-final Function onTap;
-const TerminalWidget({super.key, required this.terminalName,required this.onTap});
-
+  final String terminalName;
+  final Function onTap;
+  const TerminalWidget(
+      {super.key, required this.terminalName, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         onTap;
       },
       child: Container(
@@ -66,7 +87,6 @@ const TerminalWidget({super.key, required this.terminalName,required this.onTap}
         decoration: const BoxDecoration(
           color: textFieldFillColor,
           borderRadius: BorderRadius.all(Radius.circular(20)),
-
         ),
         child: Center(
           child: Text(

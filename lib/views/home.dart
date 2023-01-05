@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-import 'package:one_go_app/custom_widgets/dropdown_searchable_button.dart';
-import 'package:one_go_app/custom_widgets/reusable_button.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/dropdown_searchable_button.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/drawer/drawer_screen.dart';
 

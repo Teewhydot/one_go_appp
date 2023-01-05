@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-import 'package:one_go_app/custom_widgets/reusable_button.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 
 class NoShuttleScreen extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-import 'package:one_go_app/custom_widgets/reusable_button.dart';
-import 'package:one_go_app/custom_widgets/text_field_form.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/text_field_form.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = 'SignUpPage';

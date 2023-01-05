@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/views/change_ewallet_pin_screen.dart';
-import 'package:one_go_app/views/change_password_screen.dart';
+import 'package:one_go_app/views/account_management/change_ewallet_pin_screen.dart';
+import 'package:one_go_app/views/account_management/change_password_screen.dart';
+import 'package:one_go_app/views/account_management/forgot_password_step_two.dart';
 import 'package:one_go_app/views/custom_bottom_sheet.dart';
 import 'package:one_go_app/views/ewallet_pin_page.dart';
-import 'package:one_go_app/views/forgot_password_screen.dart';
-import 'package:one_go_app/views/forgot_password_step_two.dart';
 import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
@@ -17,6 +16,8 @@ import 'package:one_go_app/views/sign_up_page.dart';
 import 'package:one_go_app/views/terminals_page.dart';
 import 'package:one_go_app/views/top_up_page.dart';
 import 'package:one_go_app/views/welcome_page.dart';
+
+import 'views/account_management/forgot_password_screen.dart';
 
 void main() {
   runApp(const MyApp());

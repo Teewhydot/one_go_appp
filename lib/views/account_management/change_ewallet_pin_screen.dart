@@ -1,11 +1,11 @@
 // ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
-import 'package:one_go_app/custom_widgets/reusable_button.dart';
-import 'package:one_go_app/custom_widgets/validators.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/validators.dart';
+import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/forgot_password_screen.dart';
+import 'package:one_go_app/views/account_management/forgot_password_screen.dart';
 
 class ChangeE_WalletPinPage extends StatefulWidget {
   static const String id = 'Change E-Wallet Pin Page';

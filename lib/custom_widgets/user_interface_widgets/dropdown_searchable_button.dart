@@ -1,7 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:one_go_app/custom_widgets/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 
 class DropDownButtonSearchable extends StatefulWidget {
   final String hint;
@@ -36,7 +36,7 @@ class _DropDownButtonSearchableState extends State<DropDownButtonSearchable> {
             filled: true,
             fillColor: textFieldFillColor,
             isDense: true,
-            contentPadding:EdgeInsets.all(10.r),
+            contentPadding: EdgeInsets.all(10.r),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.r),
             ),
