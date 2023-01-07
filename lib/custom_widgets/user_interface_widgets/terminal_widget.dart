@@ -13,17 +13,19 @@ class TerminalWidget extends StatelessWidget {
       onTap: () {
         onTap;
       },
-      child: Container(
-        height: 50,
-        width: 222,
-        decoration: const BoxDecoration(
-          color: textFieldFillColor,
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-        ),
-        child: Center(
-          child: Text(
-            terminalName,
-            style: boldBlueStyle,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 60.0, right: 60.0),
+        child: Container(
+          height: 50,
+          decoration: const BoxDecoration(
+            color: textFieldFillColor,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          child: Center(
+            child: Text(
+              terminalName,
+              style: boldBlueStyle.copyWith(color: blueColor),
+            ),
           ),
         ),
       ),

@@ -19,7 +19,7 @@ class History extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Container(
-                    color: Colors.blue,
+                    color: blueColor,
                     child: Stack(
                       children: [
                         Positioned(
@@ -100,7 +100,7 @@ class History extends StatelessWidget {
               Expanded(
                 flex: 5,
                 child: Container(
-                  color: Colors.white,
+                  color: whiteColor,
                   child: ListView(
                     children: const [
                       HistoryWidget(

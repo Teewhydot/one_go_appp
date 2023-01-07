@@ -11,58 +11,52 @@ class Terminals extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            Expanded(
-                flex: 5,
-                child: Column(
-                  children: [
-                    Image.asset(Assets.figmaPngsTerminals),
-                    addVerticalSpacing(10),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Terminals",
-                        style: boldBlueStyle.copyWith(fontSize: 30),
-                      ),
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                    addVerticalSpacing(10),
-                    TerminalWidget(
-                      terminalName: 'School Bus',
-                      onTap: () {},
-                    ),
-                  ],
-                )),
+            Image.asset(Assets.figmaPngsTerminals),
+            addVerticalSpacing(10),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Terminals",
+                style: boldBlueStyle.copyWith(fontSize: 30, color: blueColor),
+              ),
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'School Park',
+              onTap: () {},
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'Oke Odo',
+              onTap: () {},
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'MFM',
+              onTap: () {},
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'Chapel',
+              onTap: () {},
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'Sanrab',
+              onTap: () {},
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'Illesanmi',
+              onTap: () {},
+            ),
+            addVerticalSpacing(10),
+            TerminalWidget(
+              terminalName: 'Mark',
+              onTap: () {},
+            ),
           ],
         ),
       ),

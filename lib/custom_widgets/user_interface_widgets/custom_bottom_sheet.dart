@@ -69,7 +69,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
             padding: EdgeInsets.all(10.0.r),
             child: Container(
               decoration: const BoxDecoration(
-                color: Colors.blue,
+                color: blueColor,
                 borderRadius: borderRadius30,
               ),
               child: ListView(
@@ -148,12 +148,12 @@ class DriverInfoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Ben Peters", style: normalBlackStyle),
+                const Text("Ben Peters", style: normalWhiteStyle),
                 Row(
                   children: [
-                    const Text("4.7 stars", style: normalBlackStyle),
+                    const Text("4.7 stars", style: normalWhiteStyle),
                     addHorizontalSpacing(10),
-                    const Text("2000+ rides", style: normalBlackStyle),
+                    const Text("2000+ rides", style: normalWhiteStyle),
                   ],
                 ),
               ],

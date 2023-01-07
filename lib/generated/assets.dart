@@ -30,7 +30,7 @@ class Assets {
   static const String figmaPngsNavChange = 'assets/figma_pngs/nav_change.png';
   static const String figmaPngsNoAvailableBus =
       'assets/figma_pngs/no_available_bus.png';
-  static const String figmaPngsOnegoImage = 'assets/figma_pngs/onego_image.png';
+  static const String figmaPngsOnegoImage = 'assets/figma_pngs/onego_image.jpg';
   static const String figmaPngsOtpVerification =
       'assets/figma_pngs/otp_verification.png';
   static const String figmaPngsPadlock = 'assets/figma_pngs/padlock.png';

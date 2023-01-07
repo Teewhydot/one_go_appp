@@ -5,7 +5,7 @@ import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/top_up_step_two.dart';
 
-enum Platform { Paystack, Flutterwave }
+enum Platform { paystack, flutterwave }
 
 class TopUpPage extends StatelessWidget {
   static const String id = 'Top up page';
@@ -18,39 +18,39 @@ class TopUpPage extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            const Positioned(
-              top: 70,
-              left: 20,
-              child: CircleAvatar(
+            Positioned(
+              top: 70.h,
+              left: 20.w,
+              child: const CircleAvatar(
                 radius: 70,
                 backgroundImage: AssetImage(Assets.figmaPngsProfilePhoto),
               ),
             ),
             Positioned(
-                top: 90,
-                right: 20,
+                top: 90.h,
+                right: 20.w,
                 child: Image.asset(
                   Assets.figmaPngsBlueWallet,
-                  height: 160,
-                  width: 160,
+                  height: 160.h,
+                  width: 160.w,
                 )),
             Positioned(
-                top: 250,
-                left: 20,
+                top: 250.h,
+                left: 20.w,
                 child: Text(
                   'Top Up',
                   style: boldBlueStyle.copyWith(fontSize: 32.sp),
                 )),
             Positioned(
-                top: 300,
-                left: 20,
+                top: 300.h,
+                left: 20.w,
                 child: Text(
                   'Payment gateway',
                   style: boldBlueStyle.copyWith(fontSize: 27.sp),
                 )),
             // grey
             Positioned(
-                top: 350,
+                top: 350.h,
                 left: 0,
                 right: 0,
                 child: Padding(
@@ -62,12 +62,12 @@ class TopUpPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => const TopUpStepTwo(
-                                    selectedPlatform: Platform.Paystack,
+                                    selectedPlatform: Platform.paystack,
                                   )));
                     },
                     child: Container(
-                      height: 70,
-                      width: 150,
+                      height: 70.h,
+                      width: 150.w,
                       decoration: const BoxDecoration(
                           color: greyColor, borderRadius: borderRadius30All),
                       child: const Center(
@@ -80,7 +80,7 @@ class TopUpPage extends StatelessWidget {
                   ),
                 )),
             Positioned(
-                top: 450,
+                top: 450.h,
                 left: 0,
                 right: 0,
                 child: Padding(
@@ -92,12 +92,12 @@ class TopUpPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => const TopUpStepTwo(
-                                    selectedPlatform: Platform.Flutterwave,
+                                    selectedPlatform: Platform.flutterwave,
                                   )));
                     },
                     child: Container(
-                      height: 70,
-                      width: 150,
+                      height: 70.h,
+                      width: 150.w,
                       decoration: const BoxDecoration(
                           color: greyColor, borderRadius: borderRadius30All),
                       child: const Center(
@@ -110,7 +110,7 @@ class TopUpPage extends StatelessWidget {
                   ),
                 )),
             Positioned(
-                bottom: 50,
+                bottom: 50.h,
                 left: 0,
                 right: 0,
                 child: Padding(

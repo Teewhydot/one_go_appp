@@ -116,7 +116,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     () {},
                     blueColor),
-                addVerticalSpacing(25),
+                addVerticalSpacing(100),
               ],
             ),
           ),
