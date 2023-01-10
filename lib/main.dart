@@ -9,6 +9,7 @@ import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/phone_verification_screen.dart';
+import 'package:one_go_app/views/queue_successful.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
 import 'package:one_go_app/views/seat_booked_success.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: WelcomePage.id,
+        initialRoute: QueueSuccessfull.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -59,6 +60,7 @@ class _MyAppState extends State<MyApp> {
           TopUpPage.id: (context) => const TopUpPage(),
           ChangeE_WalletPinPage.id: (context) => const ChangeE_WalletPinPage(),
           History.id: (context) => const History(),
+          QueueSuccessfull.id: (context) => const QueueSuccessfull(),
         },
       ),
     );
