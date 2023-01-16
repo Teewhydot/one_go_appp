@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
@@ -24,28 +25,36 @@ class QueueSuccessfull extends StatelessWidget {
                   height: 110,
                   width: 110,
                 )),
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 20, right: 20, top: 20, bottom: 5),
                   child: Text(
-                    'You have successfully joined the queue',
-                    style: boldBlueStyle,
+                    'You have successfully joined',
+                    style: boldBlueStyle.copyWith(fontSize: 18),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    'the queue',
+                    style: boldBlueStyle.copyWith(fontSize: 18.sp),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Your queue number',
-                    style: boldBlueStyle,
+                    style: boldBlueStyle.copyWith(fontSize: 18.sp),
                   ),
                 ),
                 const TimerContainer(
                   value: 8,
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Estimated pickup time',
-                    style: boldBlueStyle,
+                    style: boldBlueStyle.copyWith(fontSize: 18.sp),
                   ),
                 ),
                 Row(
@@ -64,9 +73,9 @@ class QueueSuccessfull extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: ReusableButton(
-                  const Text(
+                  Text(
                     'Leave Queue',
-                    style: boldWhiteStyle,
+                    style: boldWhiteStyle.copyWith(fontSize: 18.sp),
                   ),
                   () {},
                   blueColor),

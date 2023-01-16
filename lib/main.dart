@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: QueueSuccessfull.id,
+        initialRoute: WelcomePage.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),

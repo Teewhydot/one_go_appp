@@ -36,6 +36,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(
                       Icons.bolt,
@@ -105,6 +106,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
                         'Check in',
                         style: boldWhiteStyle,
                       )),
+                  addVerticalSpacing(50),
                 ],
               ),
             ),
