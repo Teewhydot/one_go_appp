@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
+import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/text_field_form.dart';
+import 'package:one_go_app/views/mail_verification_screen.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = 'SignUpPage';
@@ -24,6 +26,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _phoneNumberController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final nav = Navigator.of(context);
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
@@ -46,6 +49,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   obscurePassword: false,
                   maxLines: null,
                   suffixIcon: null,
+                  maxLength: null,
+                  validator: nameValidator,
                 ),
                 addVerticalSpacing(25),
                 TextFieldForm(
@@ -55,6 +60,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   obscurePassword: false,
                   maxLines: null,
                   suffixIcon: null,
+                  maxLength: null,
+                  validator: nameValidator,
                 ),
                 addVerticalSpacing(25),
                 TextFieldForm(
@@ -64,6 +71,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   obscurePassword: false,
                   maxLines: null,
                   suffixIcon: null,
+                  maxLength: null,
+                  validator: emailValidator,
                 ),
                 addVerticalSpacing(25),
                 TextFieldForm(
@@ -73,6 +82,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   obscurePassword: false,
                   maxLines: 1,
                   suffixIcon: null,
+                  maxLength: 11,
+                  validator: phoneValidator,
                 ),
                 addVerticalSpacing(25),
                 TextFieldForm(
@@ -81,6 +92,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   keyboardType: TextInputType.visiblePassword,
                   obscurePassword: isPasswordVisible,
                   maxLines: null,
+                  maxLength: null,
+                  validator: passwordValidator,
                   suffixIcon: GestureDetector(
                       onTap: () {
                         setState(() {
@@ -95,9 +108,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 TextFieldForm(
                   controller: _confirmPasswordController,
                   hintText: 'Confirm Password',
+                  maxLength: null,
                   keyboardType: TextInputType.visiblePassword,
                   obscurePassword: isConfirmPasswordVisible,
                   maxLines: null,
+                  validator: matchPasswordValidator,
                   suffixIcon: GestureDetector(
                       onTap: () {
                         setState(() {
@@ -113,9 +128,12 @@ class _SignUpPageState extends State<SignUpPage> {
                     const Text(
                       'Complete',
                       style: boldWhiteStyle,
-                    ),
-                    () {},
-                    blueColor),
+                    ), () {
+                  nav.pushNamed(MailVerificationScreen.id);
+                  if (_formKey.currentState!.validate()) {
+                    nav.pushNamed(MailVerificationScreen.id);
+                  }
+                }, blueColor),
                 addVerticalSpacing(100),
               ],
             ),

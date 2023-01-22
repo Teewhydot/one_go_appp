@@ -5,8 +5,7 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/account_management/forgot_password_screen.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:one_go_app/views/phone_verification_screen.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class MailVerificationScreen extends StatefulWidget {
@@ -21,6 +20,7 @@ class _MailVerificationScreenState extends State<MailVerificationScreen> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    final nav = Navigator.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -98,11 +98,7 @@ class _MailVerificationScreenState extends State<MailVerificationScreen> {
                       style: boldWhiteStyle,
                     ), () {
                   if (_formKey.currentState!.validate()) {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: const ForgotPasswordPage(),
-                            type: PageTransitionType.rightToLeft));
+                    nav.pushNamed(PhoneVerificationScreen.id);
                   }
                 }, blueColor),
               ),

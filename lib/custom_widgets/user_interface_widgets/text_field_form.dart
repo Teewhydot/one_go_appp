@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 
 class TextFieldForm extends StatelessWidget {
@@ -10,6 +11,8 @@ class TextFieldForm extends StatelessWidget {
       required this.obscurePassword,
       required this.suffixIcon,
       required this.maxLines,
+      required this.validator,
+      required this.maxLength,
       required this.keyboardType})
       : _controller = controller;
 
@@ -19,14 +22,18 @@ class TextFieldForm extends StatelessWidget {
   final Widget? suffixIcon;
   final bool obscurePassword;
   final int? maxLines;
+  final MultiValidator validator;
+  final int? maxLength;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: _controller,
       cursorColor: Colors.black,
+      validator: validator,
       obscureText: obscurePassword,
       keyboardType: keyboardType,
+      maxLength: maxLength,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         filled: true,

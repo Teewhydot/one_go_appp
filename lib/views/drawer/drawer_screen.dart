@@ -9,7 +9,6 @@ import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/account_management/change_password_screen.dart';
 import 'package:one_go_app/views/history.dart';
-import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
 import 'package:one_go_app/views/top_up_page.dart';
 
@@ -98,15 +97,9 @@ class DrawerScreen extends StatelessWidget {
                     onTap: () {}),
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
-                    text: 'Google Maps',
+                    text: 'Set E-wallet pin',
                     onTap: () {
                       nav.popAndPushNamed(RideTrackingPage.id);
-                    }),
-                DrawerItem(
-                    image: Image.asset(Assets.figmaPngsEmail),
-                    text: 'No available shuttle',
-                    onTap: () {
-                      nav.popAndPushNamed(NoShuttleScreen.id);
                     }),
               ],
             ),

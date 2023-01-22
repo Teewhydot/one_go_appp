@@ -4,14 +4,18 @@ import 'package:one_go_app/custom_widgets/user_interface_widgets/custom_bottom_s
 import 'package:one_go_app/views/account_management/change_ewallet_pin_screen.dart';
 import 'package:one_go_app/views/account_management/change_password_screen.dart';
 import 'package:one_go_app/views/account_management/forgot_password_step_two.dart';
+import 'package:one_go_app/views/account_management/forgot_pin_page.dart';
+import 'package:one_go_app/views/account_management/forgot_pin_page_step_two.dart';
 import 'package:one_go_app/views/ewallet_pin_page.dart';
 import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
+import 'package:one_go_app/views/mail_verification_screen.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/phone_verification_screen.dart';
 import 'package:one_go_app/views/queue_successful.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
 import 'package:one_go_app/views/seat_booked_success.dart';
+import 'package:one_go_app/views/set_wallet_pin_page.dart';
 import 'package:one_go_app/views/sign_in_page.dart';
 import 'package:one_go_app/views/sign_up_page.dart';
 import 'package:one_go_app/views/terminals_page.dart';
@@ -61,6 +65,12 @@ class _MyAppState extends State<MyApp> {
           ChangeE_WalletPinPage.id: (context) => const ChangeE_WalletPinPage(),
           History.id: (context) => const History(),
           QueueSuccessfull.id: (context) => const QueueSuccessfull(),
+          SetWalletPin.id: (context) => const SetWalletPin(),
+          ForgotPinPage.id: (context) => const ForgotPinPage(),
+          ForgotEwalletPinStepTwo.id: (context) =>
+              const ForgotEwalletPinStepTwo(),
+          MailVerificationScreen.id: (context) =>
+              const MailVerificationScreen(),
         },
       ),
     );
