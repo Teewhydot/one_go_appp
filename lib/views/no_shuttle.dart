@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/home.dart';
+import 'package:one_go_app/views/queue_successful.dart';
 
 class NoShuttleScreen extends StatelessWidget {
   static const String id = 'No shuttle screen';
@@ -9,6 +11,7 @@ class NoShuttleScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final nav = Navigator.of(context);
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
@@ -31,14 +34,16 @@ class NoShuttleScreen extends StatelessWidget {
                   const Text(
                     'Join queue',
                     style: boldWhiteStyle,
-                  ),
-                  () {},
-                  blueColor),
+                  ), () {
+                nav.pushNamed(QueueSuccessfull.id);
+              }, blueColor),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                nav.pushReplacementNamed(Home.id);
+              },
               child: const Text(
-                'Continue',
+                'Cancel',
                 style: boldBlueStyle,
               ),
             )

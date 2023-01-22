@@ -6,7 +6,6 @@ import 'package:one_go_app/views/account_management/change_password_screen.dart'
 import 'package:one_go_app/views/account_management/forgot_password_step_two.dart';
 import 'package:one_go_app/views/account_management/forgot_pin_page.dart';
 import 'package:one_go_app/views/account_management/forgot_pin_page_step_two.dart';
-import 'package:one_go_app/views/ewallet_pin_page.dart';
 import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/mail_verification_screen.dart';
@@ -44,7 +43,7 @@ class _MyAppState extends State<MyApp> {
       designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: WelcomePage.id,
+        initialRoute: Home.id,
         routes: {
           WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
@@ -57,7 +56,6 @@ class _MyAppState extends State<MyApp> {
           GoogleMapsBottomSheet.id: (context) => const GoogleMapsBottomSheet(),
           ChangePasswordScreen.id: (context) => const ChangePasswordScreen(),
           ForgotPasswordStepTwo.id: (context) => const ForgotPasswordStepTwo(),
-          E_WalletPinPage.id: (context) => const E_WalletPinPage(),
           ForgotPasswordPage.id: (context) => const ForgotPasswordPage(),
           PhoneVerificationScreen.id: (context) =>
               const PhoneVerificationScreen(),

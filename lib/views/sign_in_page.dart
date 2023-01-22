@@ -113,7 +113,7 @@ class _SignInPageState extends State<SignInPage> {
                           style: boldWhiteStyle,
                         ), () {
                       if (_formKey.currentState!.validate()) {
-                        nav.pushNamed(Home.id);
+                        nav.pushReplacementNamed(Home.id);
                       }
                     }, blueColor),
                   ),

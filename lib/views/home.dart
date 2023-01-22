@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
@@ -5,6 +7,9 @@ import 'package:one_go_app/custom_widgets/user_interface_widgets/dropdown_search
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/drawer/drawer_screen.dart';
+import 'package:one_go_app/views/ewallet_pin_page.dart';
+
+enum shuttleAvailability { available, unavailable }
 
 class Home extends StatefulWidget {
   static const String id = 'Home';
@@ -32,6 +37,7 @@ class _HomeState extends State<Home> {
   final int _accountBalance = 0;
   @override
   Widget build(BuildContext context) {
+    final nav = Navigator.of(context);
     return Scaffold(
       appBar: AppBar(
         leading: Builder(
@@ -133,6 +139,10 @@ class _HomeState extends State<Home> {
                   ), () {
                 if (_formKey.currentState!.validate()) {
                   // do something
+                  nav.push(MaterialPageRoute(
+                      builder: (context) => const E_WalletPinPage(
+                            availability: shuttleAvailability.unavailable,
+                          )));
                 } else {}
               }, blueColor),
             ),

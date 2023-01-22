@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/ride_tracking_page.dart';
 
 class QueueSuccessfull extends StatelessWidget {
   static const String id = 'Queue Successfull';
@@ -10,6 +11,7 @@ class QueueSuccessfull extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final nav = Navigator.of(context);
     return Scaffold(
       backgroundColor: whiteColor,
       body: Column(
@@ -76,9 +78,9 @@ class QueueSuccessfull extends StatelessWidget {
                   Text(
                     'Leave Queue',
                     style: boldWhiteStyle.copyWith(fontSize: 18.sp),
-                  ),
-                  () {},
-                  blueColor),
+                  ), () {
+                nav.pushNamed(RideTrackingPage.id);
+              }, blueColor),
             ),
           ),
         ],
@@ -95,8 +97,8 @@ class TimerContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 26,
-      width: 46,
+      height: 46.h,
+      width: 46.w,
       decoration: BoxDecoration(
           color: greyColor, borderRadius: BorderRadius.circular(10)),
       child: Center(

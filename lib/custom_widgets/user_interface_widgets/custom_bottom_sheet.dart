@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/home.dart';
 
 class GoogleMapsBottomSheet extends StatefulWidget {
   static const String id = 'GoogleMapsBottomSheet';
@@ -14,6 +15,7 @@ class GoogleMapsBottomSheet extends StatefulWidget {
 class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
   @override
   Widget build(BuildContext context) {
+    final nav = Navigator.of(context);
     final deviceHeight = MediaQuery.of(context).size.height;
     final deviceWidth = MediaQuery.of(context).size.width;
     final totalBottomSheetHeight = deviceHeight / 2.5;
@@ -101,7 +103,9 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
                     thickness: 1,
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        nav.pushReplacementNamed(Home.id);
+                      },
                       child: const Text(
                         'Check in',
                         style: boldWhiteStyle,

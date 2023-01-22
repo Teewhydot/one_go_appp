@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
-import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
 import 'package:one_go_app/views/top_up_step_two.dart';
 
@@ -109,20 +108,6 @@ class TopUpPage extends StatelessWidget {
                     ),
                   ),
                 )),
-            Positioned(
-                bottom: 50.h,
-                left: 0,
-                right: 0,
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: ReusableButton(
-                      const Text(
-                        'Proceed',
-                        style: boldWhiteStyle,
-                      ),
-                      () {},
-                      blueColor),
-                ))
           ],
         ),
       ),
