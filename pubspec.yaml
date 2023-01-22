@@ -30,6 +30,7 @@ dependencies:
   location: ^4.4.0
   figma_squircle: ^0.5.3
   date_time_picker: ^2.1.0
+  dropdown_banner: ^1.4.0
 
 dev_dependencies:
   flutter_test:
