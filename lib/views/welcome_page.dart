@@ -165,8 +165,35 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
+    precacheImage(image1!.image, context);
+    precacheImage(image2!.image, context);
+    precacheImage(image3!.image, context);
+    precacheImage(image4!.image, context);
+    precacheImage(image5!.image, context);
+    precacheImage(image6!.image, context);
+    precacheImage(image7!.image, context);
+    precacheImage(image8!.image, context);
+    precacheImage(image9!.image, context);
+    precacheImage(image10!.image, context);
+    precacheImage(image11!.image, context);
+    precacheImage(image12!.image, context);
+    precacheImage(image13!.image, context);
+    precacheImage(image14!.image, context);
+    precacheImage(image15!.image, context);
+    precacheImage(image16!.image, context);
+    precacheImage(image17!.image, context);
+    precacheImage(image18!.image, context);
+    precacheImage(image19!.image, context);
+    precacheImage(image20!.image, context);
+    precacheImage(image21!.image, context);
+    precacheImage(image22!.image, context);
+    precacheImage(image23!.image, context);
+    precacheImage(image24!.image, context);
+    precacheImage(image25!.image, context);
+    precacheImage(image26!.image, context);
+    precacheImage(image27!.image, context);
+    precacheImage(image28!.image, context);
   }
 
   @override

@@ -32,7 +32,10 @@ class _E_WalletPinPageState extends State<E_WalletPinPage> {
         backgroundColor: whiteColor,
         body: ListView(
           children: [
-            Image.asset(Assets.figmaPngsWalletPinPage),
+            Image.asset(
+              Assets.figmaPngsWalletPinPage,
+              fit: BoxFit.cover,
+            ),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(

@@ -20,106 +20,105 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            Image.asset(Assets.figmaPngsChangePassword),
-            Expanded(
-                flex: 2,
-                child: Padding(
-                  padding: EdgeInsets.all(15.0.r),
-                  child: ListView(
-                    children: [
-                      addVerticalSpacing(10),
-                      Text(
-                        "Change your password",
-                        style: boldBlackStyle.copyWith(fontSize: 30.sp),
-                      ),
-                      addVerticalSpacing(30),
-                      Text(
-                        "Old password",
-                        style: boldBlackStyle.copyWith(fontSize: 20.sp),
-                      ),
-                      addVerticalSpacing(10),
-                      TextFormField(
-                        validator: passwordValidator,
-                        obscureText: isPasswordVisible,
-                        obscuringCharacter: '*',
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        onChanged: (value) {},
-                        decoration: InputDecoration(
-                          suffixIcon: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPasswordVisible = !isPasswordVisible;
-                                });
-                              },
-                              child: const Icon(Icons.visibility)),
-                          hintText: 'Password',
-                          contentPadding: const EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
-                        ),
-                      ),
-                      addVerticalSpacing(30),
-                      Text(
-                        "New password",
-                        style: boldBlackStyle.copyWith(fontSize: 20.sp),
-                      ),
-                      addVerticalSpacing(10),
-                      TextFormField(
-                        validator: passwordValidator,
-                        obscureText: isPasswordVisible,
-                        obscuringCharacter: '*',
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        onChanged: (value) {},
-                        decoration: InputDecoration(
-                          suffixIcon: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPasswordVisible = !isPasswordVisible;
-                                });
-                              },
-                              child: const Icon(Icons.visibility)),
-                          hintText: 'Password',
-                          contentPadding: const EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
-                        ),
-                      ),
-                      addVerticalSpacing(30),
-                      Text(
-                        "Confirm new password",
-                        style: boldBlackStyle.copyWith(fontSize: 20.sp),
-                      ),
-                      addVerticalSpacing(10),
-                      TextFormField(
-                        validator: passwordValidator,
-                        obscureText: isPasswordVisible,
-                        obscuringCharacter: '*',
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        onChanged: (value) {},
-                        decoration: InputDecoration(
-                          suffixIcon: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isPasswordVisible = !isPasswordVisible;
-                                });
-                              },
-                              child: const Icon(Icons.visibility)),
-                          hintText: 'Password',
-                          contentPadding: const EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
-                        ),
-                      ),
-                      addVerticalSpacing(60),
-                      ReusableButton(
-                          const Text(
-                            'Done',
-                            style: boldWhiteStyle,
-                          ),
-                          () {},
-                          blueColor)
-                    ],
+            Image.asset(Assets.figmaPngsChangePassword, fit: BoxFit.cover),
+            addVerticalSpacing(30),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Change your password",
+                    style: boldBlackStyle.copyWith(fontSize: 30.sp),
                   ),
-                )),
+                  addVerticalSpacing(30),
+                  Text(
+                    "Old password",
+                    style: boldBlackStyle.copyWith(fontSize: 20.sp),
+                  ),
+                  addVerticalSpacing(10),
+                  TextFormField(
+                    validator: passwordValidator,
+                    obscureText: isPasswordVisible,
+                    obscuringCharacter: '*',
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    onChanged: (value) {},
+                    decoration: InputDecoration(
+                      suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isPasswordVisible = !isPasswordVisible;
+                            });
+                          },
+                          child: const Icon(Icons.visibility)),
+                      hintText: 'Password',
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                    ),
+                  ),
+                  addVerticalSpacing(30),
+                  Text(
+                    "New password",
+                    style: boldBlackStyle.copyWith(fontSize: 20.sp),
+                  ),
+                  addVerticalSpacing(10),
+                  TextFormField(
+                    validator: passwordValidator,
+                    obscureText: isPasswordVisible,
+                    obscuringCharacter: '*',
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    onChanged: (value) {},
+                    decoration: InputDecoration(
+                      suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isPasswordVisible = !isPasswordVisible;
+                            });
+                          },
+                          child: const Icon(Icons.visibility)),
+                      hintText: 'Password',
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                    ),
+                  ),
+                  addVerticalSpacing(30),
+                  Text(
+                    "Confirm new password",
+                    style: boldBlackStyle.copyWith(fontSize: 20.sp),
+                  ),
+                  addVerticalSpacing(10),
+                  TextFormField(
+                    validator: passwordValidator,
+                    obscureText: isPasswordVisible,
+                    obscuringCharacter: '*',
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    onChanged: (value) {},
+                    decoration: InputDecoration(
+                      suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isPasswordVisible = !isPasswordVisible;
+                            });
+                          },
+                          child: const Icon(Icons.visibility)),
+                      hintText: 'Password',
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                    ),
+                  ),
+                  addVerticalSpacing(60),
+                  ReusableButton(
+                      const Text(
+                        'Done',
+                        style: boldWhiteStyle,
+                      ),
+                      () {},
+                      blueColor),
+                ],
+              ),
+            )
           ],
         ),
       ),
