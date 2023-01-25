@@ -4,6 +4,7 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/sign_in_page.dart';
 
 class ForgotPasswordStepTwo extends StatefulWidget {
   static const String id = 'Forgot password step two';
@@ -92,9 +93,9 @@ class _ForgotPasswordStepTwoState extends State<ForgotPasswordStepTwo> {
                         const Text(
                           'Done',
                           style: boldWhiteStyle,
-                        ),
-                        () {},
-                        blueColor)
+                        ), () {
+                      Navigator.pushReplacementNamed(context, SignInPage.id);
+                    }, blueColor)
                   ],
                 ),
               )),

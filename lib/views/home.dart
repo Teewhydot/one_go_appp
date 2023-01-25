@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                   // do something
                   nav.push(MaterialPageRoute(
                       builder: (context) => const E_WalletPinPage(
-                            availability: shuttleAvailability.unavailable,
+                            availability: shuttleAvailability.available,
                           )));
                 } else {}
               }, blueColor),

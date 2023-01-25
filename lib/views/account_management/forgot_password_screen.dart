@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/home.dart';
+import 'package:one_go_app/views/mail_verification_screen_forgot_password.dart';
 import 'package:page_transition/page_transition.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
@@ -70,7 +70,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     Navigator.push(
                         context,
                         PageTransition(
-                            child: const Home(),
+                            child: const MailVerificationScreenForgotPassword(),
                             type: PageTransitionType.rightToLeft));
                   }
                 }, blueColor),

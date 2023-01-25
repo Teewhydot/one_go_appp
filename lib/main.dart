@@ -8,7 +8,7 @@ import 'package:one_go_app/views/account_management/forgot_pin_page.dart';
 import 'package:one_go_app/views/account_management/forgot_pin_page_step_two.dart';
 import 'package:one_go_app/views/history.dart';
 import 'package:one_go_app/views/home.dart';
-import 'package:one_go_app/views/mail_verification_screen.dart';
+import 'package:one_go_app/views/mail_verification_screen_registration.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/phone_verification_screen.dart';
 import 'package:one_go_app/views/queue_successful.dart';
@@ -43,9 +43,9 @@ class _MyAppState extends State<MyApp> {
       designSize: const Size(375, 812),
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Home.id,
+        initialRoute: WelcomePage.id,
         routes: {
-          WelcomePage.id: (context) => const WelcomePage(),
+          WelcomePage.id: (context) => WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
           SignUpPage.id: (context) => const SignUpPage(),
           Home.id: (context) => const Home(),
@@ -67,8 +67,8 @@ class _MyAppState extends State<MyApp> {
           ForgotPinPage.id: (context) => const ForgotPinPage(),
           ForgotEwalletPinStepTwo.id: (context) =>
               const ForgotEwalletPinStepTwo(),
-          MailVerificationScreen.id: (context) =>
-              const MailVerificationScreen(),
+          MailVerificationScreenRegistration.id: (context) =>
+              const MailVerificationScreenRegistration(),
         },
       ),
     );

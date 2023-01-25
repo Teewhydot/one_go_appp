@@ -77,6 +77,7 @@ class _GoogleMapsBottomSheetState extends State<GoogleMapsBottomSheet> {
               ),
               child: ListView(
                 children: [
+                  addVerticalSpacing(20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

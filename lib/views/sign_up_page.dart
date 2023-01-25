@@ -3,7 +3,7 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/text_field_form.dart';
-import 'package:one_go_app/views/mail_verification_screen.dart';
+import 'package:one_go_app/views/mail_verification_screen_registration.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = 'SignUpPage';
@@ -129,9 +129,9 @@ class _SignUpPageState extends State<SignUpPage> {
                       'Complete',
                       style: boldWhiteStyle,
                     ), () {
-                  nav.pushNamed(MailVerificationScreen.id);
+                  nav.pushNamed(MailVerificationScreenRegistration.id);
                   if (_formKey.currentState!.validate()) {
-                    nav.pushNamed(MailVerificationScreen.id);
+                    nav.pushNamed(MailVerificationScreenRegistration.id);
                   }
                 }, blueColor),
                 addVerticalSpacing(100),
