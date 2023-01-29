@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/home.dart';
+import 'package:one_go_app/views/account_management/mail_verification_forgot_pin.dart';
 import 'package:page_transition/page_transition.dart';
 
 class ForgotPinPage extends StatefulWidget {
@@ -70,7 +70,7 @@ class _ForgotPinPageState extends State<ForgotPinPage> {
                     Navigator.push(
                         context,
                         PageTransition(
-                            child: const Home(),
+                            child: const MailVerificationScreenForgotPin(),
                             type: PageTransitionType.rightToLeft));
                   }
                 }, blueColor),

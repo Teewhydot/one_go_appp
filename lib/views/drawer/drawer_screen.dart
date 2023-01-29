@@ -7,9 +7,10 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/drawer_item.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
+import 'package:one_go_app/views/account_management/change_ewallet_pin_screen.dart';
 import 'package:one_go_app/views/account_management/change_password_screen.dart';
 import 'package:one_go_app/views/history.dart';
-import 'package:one_go_app/views/ride_tracking_page.dart';
+import 'package:one_go_app/views/set_wallet_pin_page.dart';
 import 'package:one_go_app/views/top_up_page.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -94,12 +95,14 @@ class DrawerScreen extends StatelessWidget {
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Change E-wallet pin',
-                    onTap: () {}),
+                    onTap: () {
+                      nav.popAndPushNamed(ChangeE_WalletPinPage.id);
+                    }),
                 DrawerItem(
                     image: Image.asset(Assets.figmaPngsEmail),
                     text: 'Set E-wallet pin',
                     onTap: () {
-                      nav.popAndPushNamed(RideTrackingPage.id);
+                      nav.popAndPushNamed(SetWalletPin.id);
                     }),
               ],
             ),

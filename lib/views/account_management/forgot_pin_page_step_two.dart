@@ -5,7 +5,7 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/account_management/forgot_password_screen.dart';
+import 'package:one_go_app/views/home.dart';
 
 class ForgotEwalletPinStepTwo extends StatefulWidget {
   static const String id = 'Forgot Ewallet Pin Step Two';
@@ -79,8 +79,8 @@ class _ForgotEwalletPinStepTwoState extends State<ForgotEwalletPinStepTwo> {
                                       style: boldWhiteStyle,
                                     ), () {
                                   if (_formKey.currentState!.validate()) {
-                                    Navigator.pushNamed(
-                                        context, ForgotPasswordPage.id);
+                                    Navigator.pushReplacementNamed(
+                                        context, Home.id);
                                   }
                                 }, blueColor),
                                 addVerticalSpacing(20),

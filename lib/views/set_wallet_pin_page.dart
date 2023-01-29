@@ -118,11 +118,7 @@ class _SetWalletPinState extends State<SetWalletPin> {
                           style: boldWhiteStyle,
                         ), () {
                       if (_formKey.currentState!.validate()) {
-                        Navigator.push(
-                            context,
-                            PageTransition(
-                                child: const ForgotPasswordPage(),
-                                type: PageTransitionType.rightToLeft));
+                        Navigator.pop(context);
                       }
                     }, blueColor),
                     addVerticalSpacing(30),
@@ -131,13 +127,7 @@ class _SetWalletPinState extends State<SetWalletPin> {
                           'Cancel',
                           style: boldWhiteStyle,
                         ), () {
-                      if (_formKey.currentState!.validate()) {
-                        Navigator.push(
-                            context,
-                            PageTransition(
-                                child: const ForgotPasswordPage(),
-                                type: PageTransitionType.rightToLeft));
-                      }
+                      Navigator.pop(context);
                     }, blueColor),
                     addVerticalSpacing(20),
                   ],

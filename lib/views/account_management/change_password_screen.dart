@@ -113,9 +113,9 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       const Text(
                         'Done',
                         style: boldWhiteStyle,
-                      ),
-                      () {},
-                      blueColor),
+                      ), () {
+                    Navigator.pop(context);
+                  }, blueColor),
                 ],
               ),
             )

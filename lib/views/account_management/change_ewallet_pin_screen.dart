@@ -5,7 +5,6 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/account_management/forgot_password_screen.dart';
 
 class ChangeE_WalletPinPage extends StatefulWidget {
   static const String id = 'Change E-Wallet Pin Page';
@@ -90,8 +89,7 @@ class _ChangeE_WalletPinPageState extends State<ChangeE_WalletPinPage> {
                                       style: boldWhiteStyle,
                                     ), () {
                                   if (_formKey.currentState!.validate()) {
-                                    Navigator.pushNamed(
-                                        context, ForgotPasswordPage.id);
+                                    Navigator.pop(context);
                                   }
                                 }, blueColor),
                                 addVerticalSpacing(20),

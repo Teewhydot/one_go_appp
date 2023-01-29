@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         initialRoute: WelcomePage.id,
         routes: {
-          WelcomePage.id: (context) => WelcomePage(),
+          WelcomePage.id: (context) => const WelcomePage(),
           SignInPage.id: (context) => const SignInPage(),
           SignUpPage.id: (context) => const SignUpPage(),
           Home.id: (context) => const Home(),

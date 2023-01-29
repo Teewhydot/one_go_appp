@@ -6,7 +6,7 @@ import 'package:one_go_app/custom_widgets/functionality/constants.dart';
 import 'package:one_go_app/custom_widgets/functionality/validators.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/reusable_button.dart';
 import 'package:one_go_app/generated/assets.dart';
-import 'package:one_go_app/views/account_management/forgot_password_screen.dart';
+import 'package:one_go_app/views/account_management/forgot_pin_page.dart';
 import 'package:one_go_app/views/home.dart';
 import 'package:one_go_app/views/no_shuttle.dart';
 import 'package:one_go_app/views/ride_tracking_page.dart';
@@ -84,7 +84,7 @@ class _E_WalletPinPageState extends State<E_WalletPinPage> {
                             Navigator.push(
                                 context,
                                 PageTransition(
-                                    child: const ForgotPasswordPage(),
+                                    child: const ForgotPinPage(),
                                     type: PageTransitionType.rightToLeft));
                           },
                       ),
