@@ -114,7 +114,7 @@ class _SetWalletPinState extends State<SetWalletPin> {
                   children: [
                     ReusableButton(
                         const Text(
-                          'Book',
+                          'Proceed',
                           style: boldWhiteStyle,
                         ), () {
                       if (_formKey.currentState!.validate()) {

@@ -129,7 +129,6 @@ class _SignUpPageState extends State<SignUpPage> {
                       'Complete',
                       style: boldWhiteStyle,
                     ), () {
-                  nav.pushNamed(MailVerificationScreenRegistration.id);
                   if (_formKey.currentState!.validate()) {
                     nav.pushNamed(MailVerificationScreenRegistration.id);
                   }
