@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_go_app/custom_widgets/user_interface_widgets/custom_bottom_sheet.dart';
 import 'package:one_go_app/views/account_management/change_ewallet_pin_screen.dart';
 import 'package:one_go_app/views/account_management/change_password_screen.dart';
+import 'package:one_go_app/views/account_management/forgot_password_screen.dart';
 import 'package:one_go_app/views/account_management/forgot_password_step_two.dart';
 import 'package:one_go_app/views/account_management/forgot_pin_page.dart';
 import 'package:one_go_app/views/account_management/forgot_pin_page_step_two.dart';
@@ -21,20 +22,18 @@ import 'package:one_go_app/views/terminals_page.dart';
 import 'package:one_go_app/views/top_up_page.dart';
 import 'package:one_go_app/views/welcome_page.dart';
 
-import 'views/account_management/forgot_password_screen.dart';
-
 void main() {
-  runApp(const MyApp());
+  runApp(const OneGoApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class OneGoApp extends StatefulWidget {
+  const OneGoApp({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<OneGoApp> createState() => _OneGoAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _OneGoAppState extends State<OneGoApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(

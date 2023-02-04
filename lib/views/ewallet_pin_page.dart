@@ -98,7 +98,7 @@ class _E_WalletPinPageState extends State<E_WalletPinPage> {
               child: Column(
                 children: [
                   ReusableButton(
-                      Text(
+                      const Text(
                         'Book',
                         style: boldWhiteStyle,
                       ), () {
